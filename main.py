@@ -75,9 +75,9 @@ def main():
 
 
 if __name__ == "__main__":
-    url_name = "chironico"
-    pretty_name = "Chironico"
-    coords = get_coordinates("Chironico, Switzerland")
+    url_name = "fontainebleau"
+    pretty_name = "Fontainebleau"
+    coords = get_coordinates("Fontainebleau, France")
     formated_coords = format_coordinates(coords)
     print(formated_coords)
     # print(formated_coords)
@@ -90,36 +90,30 @@ if __name__ == "__main__":
         with open("template.html", "a") as f:
             f.write(tag_code + SCRIPT)
     else:
-        print("Failed")
         if TOLERANCE:
             for i in range(TOLERANCE):
-                print(i)
                 nc = coords['lat'] + i/100
                 for j in range(TOLERANCE):
                     ncl = coords['lng'] + j/100
                     formated_coords = format_coordinates(
                         {'lat': nc, 'lng': ncl})
-                    print(formated_coords)
                     tag_code, url = get_widget_code(
                         formated_coords,
                         url_name,
                         pretty_name,
                         "es")
                     if is_url_ok(url):
-                        print("Fixed")
                         with open("template.html", "a") as f:
                             f.write(tag_code + SCRIPT)
                     ncl = coords['lng'] - j/100
                     formated_coords = format_coordinates(
                         {'lat': nc, 'lng': ncl})
-                    print(formated_coords)
                     tag_code, url = get_widget_code(
                         formated_coords,
                         url_name,
                         pretty_name,
                         "es")
                     if is_url_ok(url):
-                        print("Fixed")
                         with open("template.html", "a") as f:
                             f.write(tag_code + SCRIPT)
 
@@ -128,28 +122,24 @@ if __name__ == "__main__":
                     ncl = coords['lng'] + j/100
                     formated_coords = format_coordinates(
                         {'lat': nc, 'lng': ncl})
-                    print(formated_coords)
                     tag_code, url = get_widget_code(
                         formated_coords,
                         url_name,
                         pretty_name,
                         "es")
                     if is_url_ok(url):
-                        print("Fixed")
                         with open("template.html", "a") as f:
                             f.write(tag_code + SCRIPT)
 
                     ncl = coords['lng'] - j/100
                     formated_coords = format_coordinates(
                         {'lat': nc, 'lng': ncl})
-                    print(formated_coords)
                     tag_code, url = get_widget_code(
                         formated_coords,
                         url_name,
                         pretty_name,
                         "es")
                     if is_url_ok(url):
-                        print("Fixed")
                         with open("template.html", "a") as f:
                             f.write(tag_code + SCRIPT)
 
