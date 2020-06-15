@@ -61,6 +61,7 @@ def format_coordinates(coordinates):
     lng = lng.replace(".", "d").replace("-", "n")
     return lat + lng
 
+
 def get_url_location_name(location):
     """
     Transform the location name used to search the coordinates into
@@ -99,44 +100,10 @@ def is_url_ok(url):
 
 def fix_url(coords, pretty_name, lang):
     if TOLERANCE:
-        for i in range(TOLERANCE):
+        for i in range(-TOLERANCE, TOLERANCE + 1):
             nc = coords['lat'] + i/100
-            for j in range(TOLERANCE):
+            for j in range(-TOLERANCE, TOLERANCE + 1):
                 ncl = coords['lng'] + j/100
-                formated_coords = format_coordinates(
-                    {'lat': nc, 'lng': ncl})
-                tag_code, url = get_widget_code(
-                    formated_coords,
-                    pretty_name,
-                    lang)
-                if is_url_ok(url):
-                    with open("template.html", "a") as f:
-                        f.write(tag_code + SCRIPT)
-                ncl = coords['lng'] - j/100
-                formated_coords = format_coordinates(
-                    {'lat': nc, 'lng': ncl})
-                tag_code, url = get_widget_code(
-                    formated_coords,
-                    pretty_name,
-                    lang)
-                if is_url_ok(url):
-                    with open("template.html", "a") as f:
-                        f.write(tag_code + SCRIPT)
-
-            nc = coords['lat'] - i/100
-            for j in range(TOLERANCE):
-                ncl = coords['lng'] + j/100
-                formated_coords = format_coordinates(
-                    {'lat': nc, 'lng': ncl})
-                tag_code, url = get_widget_code(
-                    formated_coords,
-                    pretty_name,
-                    lang)
-                if is_url_ok(url):
-                    with open("template.html", "a") as f:
-                        f.write(tag_code + SCRIPT)
-
-                ncl = coords['lng'] - j/100
                 formated_coords = format_coordinates(
                     {'lat': nc, 'lng': ncl})
                 tag_code, url = get_widget_code(
