@@ -94,7 +94,8 @@ def is_url_ok(url):
             url, headers={'User-Agent': "Magic Browser"})
         urllib.request.urlopen(req)
         return True
-    except:
+    except urllib.error.HTTPError as e:
+        print(e)
         return False
 
 
@@ -120,7 +121,7 @@ def main():
 
 
 if __name__ == "__main__":
-    pretty_name = "Rocklands, Cape Town"
+    pretty_name = "Cabrils, Spain"
     coords = get_coordinates(pretty_name)
     formated_coords = format_coordinates(coords)
     print(formated_coords)
