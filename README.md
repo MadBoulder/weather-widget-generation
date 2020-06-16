@@ -10,5 +10,7 @@ The main idea is to:
 4. Add the widget to each of the zone pages
 
 ## Requirements
+* Python 3
+* A free account and API key from Open Cage
 
 ## Usage
