@@ -8,3 +8,7 @@ The main idea is to:
 2. Geocode each of the locations and get its coordinates via [Open Cage's API](https://opencagedata.com/api)
 3. Build the url and code of the widget required by [https://weatherwidget.io/](https://weatherwidget.io/)
 4. Add the widget to each of the zone pages
+
+## Requirements
+
+## Usage
