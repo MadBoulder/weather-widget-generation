@@ -13,4 +13,6 @@ The main idea is to:
 * Python 3
 * A free account and API key from Open Cage
 
-## Usage
+## TO DO List
+
+A better approach to generate the urls can be found at: https://news.ycombinator.com/item?id=23550316. With the current approach some location's coordinates are way to different to be corrected via trial and error (such as Yosemite Valley) and have to be set manually.
