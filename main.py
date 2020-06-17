@@ -112,27 +112,21 @@ def fix_url(coords, pretty_name, lang):
                     pretty_name,
                     lang)
                 if is_url_ok(url):
-                    with open("template.html", "a") as f:
-                        f.write(tag_code + SCRIPT)
+                    return tag_code, url
 
 
-def main():
-    pass
-
-
-if __name__ == "__main__":
-    pretty_name = "Cabrils, Spain"
+def main(pretty_name, lang, units=None):
     coords = get_coordinates(pretty_name)
     formated_coords = format_coordinates(coords)
-    print(formated_coords)
     tag_code, url = get_widget_code(
         formated_coords,
         pretty_name,
-        "es")
-    if is_url_ok(url):
-        with open("template.html", "a") as f:
-            f.write(tag_code + SCRIPT)
-    else:
-        fix_url(coords, pretty_name, "es")
+        lang)
+    if not is_url_ok(url):
+        tag_code, url = fix_url(coords, pretty_name, lang)
+    with open("template.html", "a") as f:
+        f.write(tag_code + SCRIPT)
 
-    # main()
+
+if __name__ == "__main__":
+    main("Lleida, Spain", "es")
