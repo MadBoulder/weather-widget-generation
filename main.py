@@ -10,7 +10,19 @@ A_TAG = """
     class="weatherwidget-io" 
     href="https://forecast7.com/_LANG_/_COORDS_/_LOCATION_/" 
     data-label_1="_LOCATIONPRETTY_" data-label_2="WEATHER" 
-    data-theme="pure"
+    data-font="Roboto" data-theme="pure"
+>
+    _LOCATIONPRETTY_ WEATHER
+</a>
+"""
+
+A_TAG_MOBILE = """
+<a 
+    class="weatherwidget-io" 
+    href="https://forecast7.com/_LANG_/_COORDS_/_LOCATION_/" 
+    data-label_1="_LOCATIONPRETTY_" data-label_2="WEATHER" 
+    data-font="Roboto" data-mode="Forecast" 
+    data-days="3" data-theme="pure" 
 >
     _LOCATIONPRETTY_ WEATHER
 </a>
