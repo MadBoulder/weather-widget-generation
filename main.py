@@ -16,6 +16,7 @@ A_TAG = """
 </a>
 """
 
+# For mobile we only show the forecast for 3 days
 A_TAG_MOBILE = """
 <a 
     class="weatherwidget-io" 
