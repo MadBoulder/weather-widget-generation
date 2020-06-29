@@ -12,7 +12,7 @@ A_TAG = """
     data-label_1="_LOCATIONPRETTY_" data-label_2="WEATHER" 
     data-font="Roboto" data-theme="pure"
 >
-    _LOCATIONPRETTY_ WEATHER
+    _LOCATIONPRETTY_ {{_("WEATHER")}}
 </a>
 """
 
@@ -25,7 +25,7 @@ A_TAG_MOBILE = """
     data-font="Roboto" data-mode="Forecast" 
     data-days="3" data-theme="pure" 
 >
-    _LOCATIONPRETTY_ WEATHER
+    _LOCATIONPRETTY_ {{_("WEATHER")}}
 </a>
 """
 
