@@ -2,6 +2,7 @@
     "name":"Annot",
     "latitude":43.990160,
     "longitude":6.653077,
+    "weather_location":"Annot",
     "zoom":16,
     "parkings": [
         {

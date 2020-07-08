@@ -2,6 +2,7 @@
     "name":"Arbolí",
     "latitude":41.245350,
     "longitude":0.945928,
+    "weather_location":"Arbolí",
     "zoom":16,
     "parkings": [
     ],

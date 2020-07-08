@@ -2,6 +2,7 @@
     "name":"Alcañiz",
     "latitude":41.067511,
     "longitude":-0.091174,
+    "weather_location":"Alcañiz",
     "zoom":12,
     "parkings": [
         {
