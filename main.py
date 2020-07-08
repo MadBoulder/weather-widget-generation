@@ -93,6 +93,7 @@ def normalize(s):
         ("í", "i"),
         ("ó", "o"),
         ("ú", "u"),
+        ("ñ", "n")
     )
     for a, b in replacements:
         s = s.replace(a, b).replace(a.upper(), b.upper())
@@ -167,5 +168,9 @@ def get_widget_html(pretty_name, lang, units=None):
 
 
 if __name__ == "__main__":
-    # get_widget_html("Lleida, Spain", lang="es")
-    get_widget_for_area('albarracin')
+    # get_widget_for_area('albarracin')
+    # get_widget_for_area('alcaniz')
+    # get_widget_for_area('ailefroide')
+    # get_widget_for_area('annot')
+    # get_widget_for_area('arboli')
+    get_widget_for_area('bagni_di_masino')
