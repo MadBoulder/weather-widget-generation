@@ -35,13 +35,25 @@ SCRIPT = """
 </script>
 """
 
+def get_widget_for_area(area, lang="en"):
+    """
+    """
+    datafile = 'data/zones/' + area + '/' + area + '.txt'
+    area_data = {}
+    with open(datafile, 'r', encoding='utf-8') as data:
+        area_data = json.load(data)
+    if area_data.get('weather_location'):
+        widget_code = get_widget_html(area_data.get('weather_location'), lang=lang, units=None)
+    return widget_code
+
+
 
 def get_coordinates(location):
     """
     Given a location, retrieve its latitude and longitude
     coordinates via opencagedata API
     """
-    location = location.replace(" ", "+")
+    location = urllib.parse.quote(location.replace(" ", "+"))
     api_key = None
     with open("credentials.txt", "r", encoding='utf-8') as f:
         api_key = f.read()
@@ -74,13 +86,24 @@ def format_coordinates(coordinates):
     lng = lng.replace(".", "d").replace("-", "n")
     return lat + lng
 
+def normalize(s):
+    replacements = (
+        ("á", "a"),
+        ("é", "e"),
+        ("í", "i"),
+        ("ó", "o"),
+        ("ú", "u"),
+    )
+    for a, b in replacements:
+        s = s.replace(a, b).replace(a.upper(), b.upper())
+    return s
 
 def get_url_location_name(location):
     """
     Transform the location name used to search the coordinates into
     the location format used in weatherwidget.io widget url
     """
-    return location.split(",")[0].lower().replace(" ", "-")
+    return normalize(location.split(",")[0].lower().replace(" ", "-"))
 
 
 def get_widget_code(coords, pretty_location, lang):
@@ -95,6 +118,7 @@ def get_widget_code(coords, pretty_location, lang):
     url = "https://forecast7.com/_LANG_/_COORDS_/_LOCATION_/"
     url = url.replace("_COORDS_", coords).replace(
         "_LOCATION_", location).replace("_LANG_", lang)
+    print(url)
     return tag, url
 
 
@@ -128,7 +152,7 @@ def fix_url(coords, pretty_name, lang):
                     return tag_code, url
 
 
-def main(pretty_name, lang, units=None):
+def get_widget_html(pretty_name, lang, units=None):
     coords = get_coordinates(pretty_name)
     formated_coords = format_coordinates(coords)
     tag_code, url = get_widget_code(
@@ -139,7 +163,9 @@ def main(pretty_name, lang, units=None):
         tag_code, url = fix_url(coords, pretty_name, lang)
     with open("template.html", "a") as f:
         f.write(tag_code + SCRIPT)
+    return tag_code + SCRIPT
 
 
 if __name__ == "__main__":
-    main("Lleida, Spain", "es")
+    # get_widget_html("Lleida, Spain", lang="es")
+    get_widget_for_area('albarracin')
