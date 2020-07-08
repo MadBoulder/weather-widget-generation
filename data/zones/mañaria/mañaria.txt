@@ -1,0 +1,21 @@
+{
+    "name":"Mañaria",
+    "latitude":43.134583,
+    "longitude":-2.67072,
+    "zoom":16,
+    "parkings": [
+        {
+	    	"parking_latitude":43.134583,
+	    	"parking_longitude":-2.670722
+        }
+    ],
+    "sectors": [
+    ],
+    "guides":[
+        {
+            "name":"Boulder en España (Guide)",
+            "link":"https://www.libreriadesnivel.com/libros/boulder-en-espana/9788498294590/"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnO-KUdo8RA2yN1hnOT5FHLU"
+}

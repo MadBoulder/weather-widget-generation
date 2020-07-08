@@ -1,0 +1,17 @@
+{
+    "name":"Bergkristall",
+    "latitude":46.803335,
+    "longitude":11.115751,
+    "zoom":16,
+    "parkings": [
+    ],
+    "sectors": [
+    ],
+    "guides":[
+		{
+            "name":"27Crags",
+            "link":"https://27crags.com/crags/bergkristall"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnN41LwjdtUbANbltvTS76CY"
+}

@@ -1,0 +1,21 @@
+{
+    "name":"Murgtal",
+    "latitude":47.108009,
+    "longitude":9.214010,
+    "zoom":15,
+    "parkings": [
+        {
+	    	"parking_latitude":47.107964,
+	    	"parking_longitude":9.213109
+        }
+    ],
+    "sectors": [
+    ],
+    "guides":[
+        {
+            "name":"27 Crags",
+            "link":"https://27crags.com/crags/murgtal"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnNJbC4Ev5tjy-LjVadMFIFH"
+}

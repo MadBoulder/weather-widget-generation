@@ -1,0 +1,60 @@
+{
+    "name":"Magic Wood",
+    "latitude":46.56393560999387,
+    "longitude":9.437642097473145,
+    "zoom":15,
+    "parkings": [
+        {
+	    	"parking_latitude":46.56804736042604,
+	    	"parking_longitude":9.438299087101313
+        },
+        {
+            "parking_latitude":46.56042983727198,
+            "parking_longitude":9.438774018002732
+        }
+    ],
+    "sectors": [
+        {
+            "name":"Sector Bach",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNn8V75ELOx6phHkOW3ip08"
+        },
+        {
+            "name":"Sector Mitte",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMiuTqKU6mUpI3GMstS7BD8"
+        },
+        {
+            "name":"Sector Beach",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPC1Fmal8rlkvFDSQp8003a"
+        },
+        {
+            "name":"Sector Kamel",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOAJwuVDSzRLZXhLdag6z4w"
+        },
+        {
+            "name":"Sector Haupt 1",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMdSBiFLAjrETh4d-VBezLZ"
+        },
+        {
+            "name":"Sector Haupt 2",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOJtHK7um-fDKVjQhnU7sLS"
+        },
+        {
+            "name":"Sector Swiss",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMQIfxVVM0hCi_pM6jCH3ni"
+        }     
+    ],
+    "guides":[
+        {
+            "name":"Guide",
+            "link":"https://www.gebro-verlag.de/gebro/MWbloc.htm"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnM4RJ6xcR-OsFVNU5XQq-4c"
+}

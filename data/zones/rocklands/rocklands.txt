@@ -1,0 +1,17 @@
+{
+    "name":"Rocklands",
+    "latitude":-32.14524,
+    "longitude":19.033785,
+    "zoom":16,
+    "parkings": [
+    ],
+    "sectors": [
+    ],
+    "guides":[
+        {
+            "name":"27 Crags (Guide)",
+            "link":"https://27crags.com/areas/rocklands"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnNEm2_Wxl8_GRL-BVsEmLz5"
+}

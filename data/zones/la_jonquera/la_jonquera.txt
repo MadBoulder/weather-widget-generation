@@ -1,0 +1,34 @@
+{
+    "name":"La Jonquera",
+    "latitude":42.4238325110565,
+    "longitude":2.90422684163525,
+    "zoom":16,
+    "parkings": [
+        {
+	    	"parking_latitude":42.42482247278774,
+	    	"parking_longitude":2.9033685347504843
+        },
+        {
+            "parking_latitude":42.42642435262249,
+            "parking_longitude":2.898166619926542
+        }
+    ],
+    "sectors": [
+        {
+            "name":"Sector Mont amour",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMty9WFkK407eIesIXNQ974"
+        }
+    ],
+    "guides":[
+        {
+            "name":"La Jonquera Bloquera (Blog-Guide)",
+            "link":"http://lajonquerabloquera.blogspot.com/2017/12/boulder-la-jonquera.html"
+        },
+        {
+            "name":"Boulder en España (Guide)",
+            "link":"https://www.libreriadesnivel.com/libros/boulder-en-espana/9788498294590/"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnP0rze_JV4Ai0zDEUf_-d8r"
+}

@@ -1,0 +1,25 @@
+{
+    "name":"Malniu",
+    "latitude":42.464154,
+    "longitude":1.784641,
+    "zoom":16,
+    "parkings": [
+        {
+	    "parking_latitude":42.464127,
+	    "parking_longitude":1.785602
+        }
+    ],
+    "sectors": [
+    ],
+    "guides":[
+        {
+            "name":"Ask for info in the refuge",
+            "link":"http://www.refugimalniu.com/"
+        },
+        {
+            "name":"General info, Blog",
+            "link":"https://rotpunktholds.blogspot.com/search/label/Boulder%20en%20Malniu%20%28Meranges%29"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnP1Aw8o9f_ukjOZrUlJqDz_"
+}

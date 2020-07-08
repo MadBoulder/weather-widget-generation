@@ -1,0 +1,21 @@
+{
+    "name":"Annot",
+    "latitude":43.990160,
+    "longitude":6.653077,
+    "zoom":16,
+    "parkings": [
+        {
+	    	"parking_latitude":43.991517,
+	    	"parking_longitude":6.659794
+        }
+    ],
+    "sectors": [
+    ],
+    "guides":[
+        {
+            "name":"General info and Topo",
+            "link":"http://abloc.org/index.php"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnMAh4ZL1rIUk6xiAK7py9yT"
+}

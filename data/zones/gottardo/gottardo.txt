@@ -1,0 +1,66 @@
+{
+    "name":"Gottardo",
+    "latitude":46.56009058392939,
+    "longitude":8.552562349220693,
+    "zoom":16,
+    "parkings": [
+        {
+	    	"parking_latitude":46.56048762066018,
+	    	"parking_longitude":8.557825416453852
+        }
+    ],
+    "sectors": [
+		{
+            "name":"Sector Ecstasy",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnP28UVTaQ13KMvPd7cLFuM7"
+        },
+        {
+            "name":"Sector Il cecchino",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPqDxkscqhWaHqiAYQqrKf-"
+        },
+        {
+            "name":"Sector Scary Christmas",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMVY1lIBhQ86GIHC35YBI8g"
+        },
+        {
+            "name":"Sector Dark Side",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOkCiyf6BqLOVcJkA4XkWd2"
+        },
+        {
+            "name":"Sector X",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNwchjM7kycvhDIAiz4rdS6"
+        },
+        {
+            "name":"Sector Mushroom Tunnel",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnN_3XBdQF3UCErT-g3eqXtx"
+        },
+        {
+            "name":"Sector Shark",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOORuzGFPCCTfUmYEDwKC6o"
+        },
+        {
+            "name":"Sector Suworow",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPGtHv3iN3NrFRxfXgOHHV1"
+        },
+        {
+            "name":"Sector Loch Ness",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPKYUgjARvA796cPFF6_AKK"
+        }
+    ],
+    "guides":[
+        {
+            "name":"Guide",
+            "link":"http://www.ticinoboulder.ch/ticino-guides"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnPbxMbM0XQxGwsiYk2lUIUr"
+}

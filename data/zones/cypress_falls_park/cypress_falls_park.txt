@@ -1,0 +1,17 @@
+{
+    "name":"Cypress Falls Park",
+    "latitude":49.35640677940006,
+    "longitude":-123.23726698644327,
+    "zoom":15,
+    "parkings": [
+        {
+	    	"parking_latitude":49.352047104201795,
+	    	"parking_longitude":-123.24108539105123
+        }
+    ],
+    "sectors": [
+    ],
+    "guides":[
+    ],
+    "playlist":"PLlwn5IhJiUnM2KqJKch3KV7sRa5_JZiWQ"
+}

@@ -1,0 +1,39 @@
+{ 
+    "name":"Val Daone",
+    "latitude":46.01376470452921,
+    "longitude":10.510558606136897,
+    "zoom":16,
+    "parkings": [
+        {
+	    	"parking_latitude":46.01485997099891,
+	    	"parking_longitude":10.511690998983454
+        },
+        {
+            "parking_latitude":46.0122314185318,
+            "parking_longitude":10.512007509404043
+        }
+        ,
+        {
+            "parking_latitude":46.01381657841681,
+            "parking_longitude":10.51206215836271
+        }
+    ],
+    "sectors": [
+        {
+            "name":"Sector La Curva",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPC6cFDSHD8Vy2XyfHb31Yd"
+        }
+    ],
+    "guides":[
+      {
+        "name":"daoneboulder (blog)",
+        "link":"http://daoneboulder.blogspot.com/"
+      },
+	    {
+        "name":"Daone Boulder (guide)",
+        "link":"https://www.versantesud.it/en/shop/daone-boulder/"
+      }
+    ],
+    "playlist":"PLlwn5IhJiUnPo_LPDLY3koDrJkVWy97Me"
+}

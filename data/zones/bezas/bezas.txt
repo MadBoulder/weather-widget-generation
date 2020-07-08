@@ -1,0 +1,21 @@
+{
+    "name":"Bezas",
+    "latitude":40.335750,
+    "longitude":-1.328895,
+    "zoom":16,
+    "parkings": [
+        { 
+	    	"parking_latitude":40.334093,
+	    	"parking_longitude":-1.329230
+        }
+    ],
+    "sectors": [
+    ],
+    "guides":[
+        {
+            "name":"Albarracín Bouldering (New)",
+            "link":"https://www.sofaboulder.com/tienda/destacado/albarracin-bouldering-roberto-palmer/"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnOcWBBZITIG9Px8R5JHS7GB"
+}

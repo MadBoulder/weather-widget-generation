@@ -1,0 +1,85 @@
+{
+    "name":"Albarracín",
+    "latitude":40.38813689931157,
+    "longitude":-1.4038054835650655,
+    "weather_location":"Albarracín",
+    "zoom":14,
+    "parkings": [
+        {
+	    	"parking_latitude":40.38736721572601,
+	    	"parking_longitude":-1.4066147804260254
+        },
+        {
+            "parking_latitude":40.390519478081,
+            "parking_longitude":-1.4126281125081732
+        }
+    ],
+    "sectors": [
+        {
+            "name":"Sector Techos",
+            "sector_data":"/sectors/techos.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPKroQ9eUaos7xhzSf9dJ1m"
+        },
+        {
+            "name":"Sector Arrastradero",
+            "sector_data":"/sectors/arrastradero.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPtbPKAuQBQtngdYHHKPZCJ"
+        },
+        {
+            "name":"Sector Cabrerizo",
+            "sector_data":"/sectors/cabrerizo.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnO5f9QMF-o_Slkd96MoP6NT"
+        },
+        {
+            "name":"Sector Parking",
+            "sector_data":"/sectors/parking.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNzzP_7zGA2GUg0qpZarnJd"
+        },
+        {
+            "name":"Sector Entre Aguas",
+            "sector_data":"/sectors/entre_aguas.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMrG-Z87_1LKOHeel94FQx6"
+        },
+		{
+            "name":"Sector Tierra Media",
+            "sector_data":"/sectors/tierra_media.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMDIAibjAlt-IWstXUQOmMh"
+        },
+		{
+            "name":"Sector Prado del Navazo",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnM6TD_vMSDMb40Q_prj3Zor"
+        },
+		{
+            "name":"Sector Loma de la Tejería",
+            "sector_data":"/sectors/loma_tejeria.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOz7AlDX7MmJlHtkHzKk_1F"
+        },
+		{
+            "name":"Sector La Mezquita",
+            "sector_data":"/sectors/la_mezquita.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnO3R1JHZ-OJPdRX02RPO_r7"
+        },
+		{
+            "name":"Sector La Fuente",
+            "sector_data":"/sectors/la_fuente.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnN1ghg5djXSjOtGLYF5EeG2"
+        },
+		{
+            "name":"Sector Valle de la Madera",
+            "sector_data":"/sectors/valle_de_la_madera.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPPzDLESCT_y-xBPvEi7LN-"
+        }
+    ],
+    "guides":[
+        {
+            "name":"Albarracín Bouldering (New)",
+            "link":"https://www.sofaboulder.com/tienda/destacado/albarracin-bouldering-roberto-palmer/"
+        },
+        {
+            "name":"Guía Albarracín (Old)",
+            "link":"https://www.sofaboulder.com/tienda/destacado/guia-albarracin-desnivel/"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnNj416q3K8_4c7GjiG3nLrn"
+}

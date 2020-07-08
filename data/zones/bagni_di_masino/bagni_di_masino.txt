@@ -1,0 +1,45 @@
+{
+    "name":"Bagni di Masino",
+    "latitude":46.24191061487083,
+    "longitude":9.598198694816574,
+    "zoom":16,
+    "parkings": [
+        {
+	    	"parking_latitude":46.240707379554316,
+	    	"parking_longitude":9.601402565613853
+        }
+    ],
+    "sectors": [
+        {
+            "name":"Sector I tornanti",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnO4rxn0hBigFTGafUoKs26h"
+        },
+        {
+            "name":"Sector Belverede",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMnzejOImI0v6DbYwy5tT_p"
+        },
+        {
+            "name":"Sector Ersaf",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnP8Nr7wqSS3aQiVu6Ax7ZFk"
+        },
+        {
+            "name":"Sector La Foresta",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNBDMzSIuNYMsl6jmK0hqZA"
+        }
+    ],
+    "guides":[
+        {
+            "name":"Mello Boulder (Guide)",
+            "link":"https://www.versantesud.it/en/shop/mello-boulder/"
+        },
+        {
+            "name":"27Crags",
+            "link":"https://27crags.com/crags/bagni-di-masino"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnMJ8zf2glfcxQObsuRYsdMq"
+}

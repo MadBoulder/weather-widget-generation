@@ -1,0 +1,29 @@
+{
+    "name":"Can Barto",
+    "latitude":41.64088636626326,
+    "longitude":2.6035692805189683,
+    "zoom":15,
+    "parkings": [
+        {
+	    	"parking_latitude":41.64095451853007,
+	    	"parking_longitude":2.6023381465811326
+        },
+        {
+	    	"parking_latitude":41.6460803832116,
+	    	"parking_longitude":2.594461030748448
+        }
+    ],
+    "sectors": [
+    ],
+    "guides":[
+        {
+            "name":"canbarto (Blog)",
+            "link":"http://canbarto.blogspot.com/"
+        },
+        {
+            "name":"Guide",
+            "link":"http://canbarto.blogspot.com/2016/10/mapa-sectors-can-bartomeu.html"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnOV_qNaPnAmWWm92SVxFwPj"
+}

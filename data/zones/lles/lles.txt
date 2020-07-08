@@ -1,0 +1,45 @@
+{
+    "name":"Lles de Cerdanya",
+    "latitude":42.383908,
+    "longitude":1.689178,
+    "zoom":15,
+    "parkings": [
+        {
+	    	"parking_latitude":42.386824,
+	    	"parking_longitude":1.685780
+        },
+        {
+	    	"parking_latitude":42.384733,
+	    	"parking_longitude":1.687371
+        },
+        {
+	    	"parking_latitude":42.384642,
+	    	"parking_longitude":1.686070
+        },
+        {
+	    	"parking_latitude":42.380910,
+	    	"parking_longitude":1.686681
+        },
+        {
+	    	"parking_latitude":42.379165,
+	    	"parking_longitude":1.690618
+        },
+        {
+	    	"parking_latitude":42.379931,
+	    	"parking_longitude":1.692606
+        },
+        {
+	    	"parking_latitude":42.390309,
+	    	"parking_longitude":1.687592
+        }
+    ],
+    "sectors": [
+    ],
+    "guides":[
+        {
+            "name":"Info",
+            "link":"https://www.instagram.com/p/B43OR1yI041/"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnP-7gsUNfsiuThMFrM6LgGP"
+}

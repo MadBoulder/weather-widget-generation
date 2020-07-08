@@ -1,0 +1,129 @@
+{
+    "name":"Chironico",
+    "latitude":46.42778104652293,
+    "longitude":8.849207004026766,
+    "zoom":14,
+    "parkings": [
+        {
+	    	"parking_latitude":46.43080415036842,
+	    	"parking_longitude":8.845559534928952
+        },
+        {
+	    	"parking_latitude":46.432485,
+	    	"parking_longitude":8.848242
+        },
+        {
+	    	"parking_latitude":46.432991,
+	    	"parking_longitude":8.845229
+        },
+        {
+	    	"parking_latitude":46.434110,
+	    	"parking_longitude":8.844157
+        },
+        {
+	    	"parking_latitude":46.434125,
+	    	"parking_longitude":8.843811
+        },
+        {
+	    	"parking_latitude":46.422111,
+	    	"parking_longitude":8.845339
+        },
+        {
+	    	"parking_latitude":46.421799,
+	    	"parking_longitude":8.843730
+        }
+    ],
+    "sectors": [
+        {
+            "name":"Sector Nivo bassa",
+            "sector_data":"/sectors/nivo_bassa.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPIc-w5YsK-OFeTcU3NE_1W"
+        },
+        {
+            "name":"Sector Nivo alta",
+            "sector_data":"/sectors/nivo_alta.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNOpW45ECPIAOKFM06GJsE5"
+        },
+        {
+            "name":"Sector Teamwork",
+            "sector_data":"/sectors/teamwork.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOBJepVg_dHuqcpmfGarArF"
+        },
+        {
+            "name":"Sector Barriera",
+            "sector_data":"/sectors/barriera.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPQuYeFKJ7wJwKXHPm98JuD"
+        },
+        {
+            "name":"Sector Boogalagga",
+            "sector_data":"/sectors/boogalagga.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPRpAmfAHxWwOta2nqUKCTY"
+        },
+        {
+            "name":"Sector Deliverance",
+            "sector_data":"/sectors/deliverance.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOE_OGznHS71qm_4sDb8Qq6"
+        },
+        {
+            "name":"Sector Matusalem",
+            "sector_data":"/sectors/matusalem.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOFeW-dhl8YtpDwbyWFkgVE"
+        },
+        {
+            "name":"Sector Freak brothers",
+            "sector_data":"/sectors/freak_brothers.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOk0rC2lzPLUPxs4UdvZFPn"
+        },
+        {
+            "name":"Sector La soucoupe",
+            "sector_data":"/sectors/la_soucoupe.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnN5SGeXhTWa44pPbYx-5Dwn"
+        },
+        {
+            "name":"Sector New Age",
+            "sector_data":"/sectors/new_age.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNFsfVka2MVklxtcIF-tJb8"
+        },
+        {
+            "name":"Sector Les doigts verts",
+            "sector_data":"/sectors/les_doigts_verts.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPbXfBlYLmE5hOVCjkcrW6j"
+        },
+        {
+            "name":"Sector Rah Plats Plats",
+            "sector_data":"/sectors/rah_plats_plats.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNwaCKLMMx_GCZnZsenAOh9"
+        },
+        {
+            "name":"Sector Centrale",
+            "sector_data":"/sectors/centrale.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnP7pHf10fxUqMH8aAE676kf"
+        },
+        {
+            "name":"Sector 101",
+            "sector_data":"/sectors/101.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMQPe6HQ3U4IKwUKXPUaKT5"
+        },
+        {
+            "name":"Sector Schattental",
+            "sector_data":"/sectors/schattental.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnM9e2tIND_x-XfhwTvTIwyb"
+        },
+        {
+            "name":"Sector Schattental fiume",
+            "sector_data":"/sectors/schattental_fiume.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOkQTRcrYBeMJLR91F_wfcf"
+        }
+    ],
+    "guides":[
+        {
+            "name":"Guide",
+            "link":"http://www.ticinoboulder.ch/ticino-guides"
+        },
+        {
+            "name":"27Crags",
+            "link":"https://27crags.com/crags/chironico"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnPuov7Zb5VRROfl4d6vgULM"
+}
