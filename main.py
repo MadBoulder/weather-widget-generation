@@ -35,6 +35,7 @@ SCRIPT = """
 </script>
 """
 
+
 def get_widget_for_area(area, lang="en"):
     """
     """
@@ -43,9 +44,9 @@ def get_widget_for_area(area, lang="en"):
     with open(datafile, 'r', encoding='utf-8') as data:
         area_data = json.load(data)
     if area_data.get('weather_location'):
-        widget_code = get_widget_html(area_data.get('weather_location'), lang=lang, units=None)
+        widget_code = get_widget_html(area_data.get(
+            'weather_location'), lang=lang, units=None, formated_coords=area_data.get("weather_coords"))
     return widget_code
-
 
 
 def get_coordinates(location):
@@ -86,6 +87,7 @@ def format_coordinates(coordinates):
     lng = lng.replace(".", "d").replace("-", "n")
     return lat + lng
 
+
 def normalize(s):
     replacements = (
         ("á", "a"),
@@ -98,6 +100,7 @@ def normalize(s):
     for a, b in replacements:
         s = s.replace(a, b).replace(a.upper(), b.upper())
     return s
+
 
 def get_url_location_name(location):
     """
@@ -153,9 +156,10 @@ def fix_url(coords, pretty_name, lang):
                     return tag_code, url
 
 
-def get_widget_html(pretty_name, lang, units=None):
-    coords = get_coordinates(pretty_name)
-    formated_coords = format_coordinates(coords)
+def get_widget_html(pretty_name, lang, units=None, formated_coords=None):
+    if formated_coords is None:
+        coords = get_coordinates(pretty_name)
+        formated_coords = format_coordinates(coords)
     tag_code, url = get_widget_code(
         formated_coords,
         pretty_name,
@@ -173,4 +177,4 @@ if __name__ == "__main__":
     # get_widget_for_area('ailefroide')
     # get_widget_for_area('annot')
     # get_widget_for_area('arboli')
-    get_widget_for_area('bagni_di_masino')
+    get_widget_for_area('bagni_di_masino')  # 46d249d60
