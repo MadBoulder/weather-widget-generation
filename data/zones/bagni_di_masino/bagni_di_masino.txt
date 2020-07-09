@@ -3,6 +3,7 @@
     "latitude":46.24191061487083,
     "longitude":9.598198694816574,
     "weather_location":"Bagni di Masino",
+    "weather_coords":"46d249d60",
     "zoom":16,
     "parkings": [
         {
