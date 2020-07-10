@@ -2,6 +2,7 @@
     "name":"Bezas",
     "latitude":40.335750,
     "longitude":-1.328895,
+    "weather_location": "Bezas",
     "zoom":16,
     "parkings": [
         { 
