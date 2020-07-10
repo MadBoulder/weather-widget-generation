@@ -177,4 +177,5 @@ if __name__ == "__main__":
     # get_widget_for_area('ailefroide')
     # get_widget_for_area('annot')
     # get_widget_for_area('arboli')
-    get_widget_for_area('bagni_di_masino')  # 46d249d60
+    # get_widget_for_area('bagni_di_masino')  # 46d249d60
+    get_widget_for_area('bezas')
