@@ -3,6 +3,8 @@
     "latitude":46.290832,
     "longitude":8.794853,
     "zoom":15,
+    "weather_location":"Brione",
+    "weather_coords":"46d308d79",
     "parkings": [
         {
 	    	"parking_latitude":46.2854,
