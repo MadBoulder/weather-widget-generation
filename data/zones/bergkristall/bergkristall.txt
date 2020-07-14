@@ -2,6 +2,8 @@
     "name":"Bergkristall",
     "latitude":46.803335,
     "longitude":11.115751,
+    "weather_location":"Plan",
+    "weather_coords":"46d8011d09",
     "zoom":16,
     "parkings": [
     ],

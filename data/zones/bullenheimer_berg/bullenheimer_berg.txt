@@ -2,6 +2,7 @@
     "name":"Bullenheimer Berg",
     "latitude":49.6248717,
     "longitude":10.2484967,
+    "weather_location":"Bullenheim",
     "zoom":16,
     "parkings": [
         {

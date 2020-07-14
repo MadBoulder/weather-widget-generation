@@ -2,6 +2,7 @@
     "name":"Can Barto",
     "latitude":41.64088636626326,
     "longitude":2.6035692805189683,
+    "weather_location": "Sant Cebrià de Vallalta",
     "zoom":15,
     "parkings": [
         {
