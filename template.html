@@ -16,15 +16,27 @@ $(window).resize(function() {
 </script>
 
 <script>
-$(document).load(function() {
-    if ($(this).width() < 600) {
-      $('.big-widget').hide();
-      $('.small-widget').show();
-    } else {
-      $('.big-widget').show();
-      $('.small-widget').hide();
+setTimeout(function(){
+    $('.small-widget-div').contents().unwrap();
+    if ($(this).width() > 600) {
+        $('.big-widget').show();
+        $('.small-widget').hide();
+    } else {        
+        $('.big-widget').hide();
+        $('.small-widget').show();
     }
-});
+}, 3000);
+
+// $(window).on('load',function() {
+//     if ($(this).width() < 600) {
+//       $('.big-widget').hide();
+//       $('.small-widget').show();
+//     } else {
+//       $('.big-widget').show();
+//       $('.small-widget').hide();
+//     }
+//     console.log("Fired");
+// });
 </script>
 
 <!-- <a 
@@ -166,8 +178,9 @@ $(document).load(function() {
     Sant Cebri� de Vallalta {{_("WEATHER")}}
 </a>
 
+<div class="small-widget-div" style="display: none;">
 <a 
-    class="weatherwidget-io small-widget" 
+    class="weatherwidget-io small-widget"
     href="https://forecast7.com/en/41d622d60/sant-cebria-de-vallalta/" 
     data-label_1="Sant Cebri� de Vallalta" data-label_2="WEATHER" 
     data-font="Roboto" data-mode="Forecast" 
@@ -175,7 +188,7 @@ $(document).load(function() {
 >
     Sant Cebri� de Vallalta {{_("WEATHER")}}
 </a>
-
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 </script>
+</div>
