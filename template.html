@@ -1,6 +1,34 @@
+<head>
+      <link rel="stylesheet" href="weather_widget.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
 
-<a 
-    class="weatherwidget-io" 
+<script>
+$(window).resize(function() {
+    if ($(this).width() < 600) {
+      $('.big-widget').hide();
+      $('.small-widget').show();
+    } else {
+      $('.big-widget').show();
+      $('.small-widget').hide();
+    }
+});
+</script>
+
+<script>
+$(document).load(function() {
+    if ($(this).width() < 600) {
+      $('.big-widget').hide();
+      $('.small-widget').show();
+    } else {
+      $('.big-widget').show();
+      $('.small-widget').hide();
+    }
+});
+</script>
+
+<!-- <a 
+    class="weatherwidget-io big-widget" 
     href="https://forecast7.com/en/40d41n1d44/albarracin/" 
     data-label_1="Albarrac�n" data-label_2="WEATHER" 
     data-font="Roboto" data-theme="pure"
@@ -13,7 +41,7 @@
 </script>
 
 <a 
-    class="weatherwidget-io" 
+    class="weatherwidget-io big-widget" 
     href="https://forecast7.com/en/41d05n0d13/alcaniz/" 
     data-label_1="Alca�iz" data-label_2="WEATHER" 
     data-font="Roboto" data-theme="pure"
@@ -26,7 +54,7 @@
 </script>
 
 <a 
-    class="weatherwidget-io" 
+    class="weatherwidget-io big-widget" 
     href="https://forecast7.com/en/44d896d45/ailefroide/" 
     data-label_1="Ailefroide" data-label_2="WEATHER" 
     data-font="Roboto" data-theme="pure"
@@ -39,7 +67,7 @@
 </script>
 
 <a 
-    class="weatherwidget-io" 
+    class="weatherwidget-io big-widget" 
     href="https://forecast7.com/en/43d976d67/annot/" 
     data-label_1="Annot" data-label_2="WEATHER" 
     data-font="Roboto" data-theme="pure"
@@ -52,7 +80,7 @@
 </script>
 
 <a 
-    class="weatherwidget-io" 
+    class="weatherwidget-io big-widget" 
     href="https://forecast7.com/en/41d240d95/arboli/" 
     data-label_1="Arbol�" data-label_2="WEATHER" 
     data-font="Roboto" data-theme="pure"
@@ -65,7 +93,7 @@
 </script>
 
 <a 
-    class="weatherwidget-io" 
+    class="weatherwidget-io big-widget" 
     href="https://forecast7.com/en/46d249d60/bagni-di-masino/" 
     data-label_1="Bagni di Masino" data-label_2="WEATHER" 
     data-font="Roboto" data-theme="pure"
@@ -78,7 +106,7 @@
 </script>
 
 <a 
-    class="weatherwidget-io" 
+    class="weatherwidget-io big-widget" 
     href="https://forecast7.com/en/40d33n1d32/bezas/" 
     data-label_1="Bezas" data-label_2="WEATHER" 
     data-font="Roboto" data-theme="pure"
@@ -91,7 +119,7 @@
 </script>
 
 <a 
-    class="weatherwidget-io" 
+    class="weatherwidget-io big-widget" 
     href="https://forecast7.com/en/46d308d79/brione/" 
     data-label_1="Brione" data-label_2="WEATHER" 
     data-font="Roboto" data-theme="pure"
@@ -104,7 +132,7 @@
 </script>
 
 <a 
-    class="weatherwidget-io" 
+    class="weatherwidget-io big-widget" 
     href="https://forecast7.com/en/46d8011d09/plan/" 
     data-label_1="Plan" data-label_2="WEATHER" 
     data-font="Roboto" data-theme="pure"
@@ -117,7 +145,7 @@
 </script>
 
 <a 
-    class="weatherwidget-io" 
+    class="weatherwidget-io big-widget" 
     href="https://forecast7.com/en/49d6210d23/bullenheim/" 
     data-label_1="Bullenheim" data-label_2="WEATHER" 
     data-font="Roboto" data-theme="pure"
@@ -127,13 +155,23 @@
 
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+</script> -->
 
 <a 
-    class="weatherwidget-io" 
+    class="weatherwidget-io big-widget" 
     href="https://forecast7.com/en/41d622d60/sant-cebria-de-vallalta/" 
     data-label_1="Sant Cebri� de Vallalta" data-label_2="WEATHER" 
     data-font="Roboto" data-theme="pure"
+>
+    Sant Cebri� de Vallalta {{_("WEATHER")}}
+</a>
+
+<a 
+    class="weatherwidget-io small-widget" 
+    href="https://forecast7.com/en/41d622d60/sant-cebria-de-vallalta/" 
+    data-label_1="Sant Cebri� de Vallalta" data-label_2="WEATHER" 
+    data-font="Roboto" data-mode="Forecast" 
+    data-days="3" data-theme="pure" 
 >
     Sant Cebri� de Vallalta {{_("WEATHER")}}
 </a>
