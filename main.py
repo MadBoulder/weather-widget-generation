@@ -91,10 +91,16 @@ def format_coordinates(coordinates):
 def normalize(s):
     replacements = (
         ("á", "a"),
+        ("à", "a"),
+        ("é", "e"),
+        ("è", "e"),
         ("é", "e"),
         ("í", "i"),
+        ("ì", "i"),
         ("ó", "o"),
+        ("ò", "o"),
         ("ú", "u"),
+        ("ù", "u"),
         ("ñ", "n")
     )
     for a, b in replacements:
@@ -179,4 +185,7 @@ if __name__ == "__main__":
     # get_widget_for_area('arboli')
     # get_widget_for_area('bagni_di_masino')  # 46d249d60
     # get_widget_for_area('bezas')
-    get_widget_for_area('brione') # 46d308d79
+    # get_widget_for_area('brione') # 46d308d79
+    # get_widget_for_area('bergkristall') # 46d8011d09
+    # get_widget_for_area('bullenheimer_berg')
+    get_widget_for_area('can_barto')
