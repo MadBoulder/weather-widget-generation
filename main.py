@@ -178,6 +178,7 @@ def get_widget_html(pretty_name, lang, units=None, formated_coords=None):
 
 
 if __name__ == "__main__":
+    # Commented lines are areas that already work 
     # get_widget_for_area('albarracin')
     # get_widget_for_area('alcaniz')
     # get_widget_for_area('ailefroide')
