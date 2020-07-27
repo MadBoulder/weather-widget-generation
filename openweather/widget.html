@@ -13,27 +13,29 @@
     </style>
   </head>
   <body>
-    <!--Weather widget html code-->
-    <div class="card" style="width: 300px;">
-      <div class="card-header d-flex justify-content-center">
-        London
-      </div>
-      <img class="weather-icon"></img>
-      <div class="weather-description mx-auto"></div>
-      <div class="card-body" style="padding: 0rem;">
-        <div class="d-flex justify-content-center row" style="margin: 0.75rem;">
-          <div class="col-6 my-auto">
-            <div class="row">
-              <label style="font-size: medium;">Min: </label>
-              <div class="weather-min-temperature" style="font-size: medium;"></div>
+    <div class="container d-flex justify-content-center align-content-center">
+      <!--Weather widget html code-->
+      <div class="card mt-3" style="width: 300px;">
+        <div class="card-header d-flex justify-content-center">
+          London
+        </div>
+        <img class="weather-icon"></img>
+        <div class="weather-description mx-auto"></div>
+        <div class="card-body" style="padding: 0rem;">
+          <div class="d-flex justify-content-center row" style="margin: 0.75rem;">
+            <div class="col-6 my-auto">
+              <div class="row">
+                <label style="font-size: medium;">Min:&nbsp;</label>
+                <div class="weather-min-temperature" style="font-size: medium;"></div>
+              </div>
+              <div class="row">
+                <label style="font-size: medium;">Max:&nbsp;</label>
+                <div class="weather-max-temperature" style="font-size: medium;"></div>
+              </div>
             </div>
-            <div class="row">
-              <label style="font-size: medium;">Max: </label>
-              <div class="weather-max-temperature" style="font-size: medium;"></div>
+            <div class="col-6  my-auto d-flex justify-content-center">
+              <div class="weather-temperature"></div>
             </div>
-          </div>
-          <div class="col-6  my-auto d-flex justify-content-center">
-            <div class="weather-temperature"></div>
           </div>
         </div>
       </div>
