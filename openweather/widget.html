@@ -13,9 +13,10 @@
     </style>
   </head>
   <body>
+    <!--Weather widget html code-->
     <div class="card" style="width: 300px;">
       <div class="card-header d-flex justify-content-center">
-        Ailefroide
+        London
       </div>
       <img class="weather-icon"></img>
       <div class="weather-description mx-auto"></div>
@@ -37,16 +38,17 @@
         </div>
       </div>
     </div>
+    <!-- Ideally, make a python wrapper and pass the values instead of using jQuery? -->
     <script>
         $('.weather-temperature').openWeather({
-	        lat:30,
-          lng:25,
+	        lat:51.504331316,
+          lng:-0.123166174,
           iconTarget:'.weather-icon',
           key:'a7bf54fbd775796a64aad9c5ca7d26ef',
           customIcons: './icons/',
-          minTemperatureTarget: '.weather-min-temperature',
-          maxTemperatureTarget: '.weather-max-temperature',
-          descriptionTarget: '.weather-description',
+          minTemperatureTarget:'.weather-min-temperature',
+          maxTemperatureTarget:'.weather-max-temperature',
+          descriptionTarget:'.weather-description',
         });
     </script>
   </body>
