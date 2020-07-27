@@ -1,0 +1,194 @@
+<head>
+      <link rel="stylesheet" href="weather_widget.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<script>
+$(window).resize(function() {
+    if ($(this).width() < 600) {
+      $('.big-widget').hide();
+      $('.small-widget').show();
+    } else {
+      $('.big-widget').show();
+      $('.small-widget').hide();
+    }
+});
+</script>
+
+<script>
+setTimeout(function(){
+    $('.small-widget-div').contents().unwrap();
+    if ($(this).width() > 600) {
+        $('.big-widget').show();
+        $('.small-widget').hide();
+    } else {        
+        $('.big-widget').hide();
+        $('.small-widget').show();
+    }
+}, 3000);
+
+// $(window).on('load',function() {
+//     if ($(this).width() < 600) {
+//       $('.big-widget').hide();
+//       $('.small-widget').show();
+//     } else {
+//       $('.big-widget').show();
+//       $('.small-widget').hide();
+//     }
+//     console.log("Fired");
+// });
+</script>
+
+<!-- <a 
+    class="weatherwidget-io big-widget" 
+    href="https://forecast7.com/en/40d41n1d44/albarracin/" 
+    data-label_1="Albarrac�n" data-label_2="WEATHER" 
+    data-font="Roboto" data-theme="pure"
+>
+    Albarrac�n {{_("WEATHER")}}
+</a>
+
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<a 
+    class="weatherwidget-io big-widget" 
+    href="https://forecast7.com/en/41d05n0d13/alcaniz/" 
+    data-label_1="Alca�iz" data-label_2="WEATHER" 
+    data-font="Roboto" data-theme="pure"
+>
+    Alca�iz {{_("WEATHER")}}
+</a>
+
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<a 
+    class="weatherwidget-io big-widget" 
+    href="https://forecast7.com/en/44d896d45/ailefroide/" 
+    data-label_1="Ailefroide" data-label_2="WEATHER" 
+    data-font="Roboto" data-theme="pure"
+>
+    Ailefroide {{_("WEATHER")}}
+</a>
+
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<a 
+    class="weatherwidget-io big-widget" 
+    href="https://forecast7.com/en/43d976d67/annot/" 
+    data-label_1="Annot" data-label_2="WEATHER" 
+    data-font="Roboto" data-theme="pure"
+>
+    Annot {{_("WEATHER")}}
+</a>
+
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<a 
+    class="weatherwidget-io big-widget" 
+    href="https://forecast7.com/en/41d240d95/arboli/" 
+    data-label_1="Arbol�" data-label_2="WEATHER" 
+    data-font="Roboto" data-theme="pure"
+>
+    Arbol� {{_("WEATHER")}}
+</a>
+
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<a 
+    class="weatherwidget-io big-widget" 
+    href="https://forecast7.com/en/46d249d60/bagni-di-masino/" 
+    data-label_1="Bagni di Masino" data-label_2="WEATHER" 
+    data-font="Roboto" data-theme="pure"
+>
+    Bagni di Masino {{_("WEATHER")}}
+</a>
+
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<a 
+    class="weatherwidget-io big-widget" 
+    href="https://forecast7.com/en/40d33n1d32/bezas/" 
+    data-label_1="Bezas" data-label_2="WEATHER" 
+    data-font="Roboto" data-theme="pure"
+>
+    Bezas {{_("WEATHER")}}
+</a>
+
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<a 
+    class="weatherwidget-io big-widget" 
+    href="https://forecast7.com/en/46d308d79/brione/" 
+    data-label_1="Brione" data-label_2="WEATHER" 
+    data-font="Roboto" data-theme="pure"
+>
+    Brione {{_("WEATHER")}}
+</a>
+
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<a 
+    class="weatherwidget-io big-widget" 
+    href="https://forecast7.com/en/46d8011d09/plan/" 
+    data-label_1="Plan" data-label_2="WEATHER" 
+    data-font="Roboto" data-theme="pure"
+>
+    Plan {{_("WEATHER")}}
+</a>
+
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<a 
+    class="weatherwidget-io big-widget" 
+    href="https://forecast7.com/en/49d6210d23/bullenheim/" 
+    data-label_1="Bullenheim" data-label_2="WEATHER" 
+    data-font="Roboto" data-theme="pure"
+>
+    Bullenheim {{_("WEATHER")}}
+</a>
+
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script> -->
+
+<a 
+    class="weatherwidget-io big-widget" 
+    href="https://forecast7.com/en/41d622d60/sant-cebria-de-vallalta/" 
+    data-label_1="Sant Cebri� de Vallalta" data-label_2="WEATHER" 
+    data-font="Roboto" data-theme="pure"
+>
+    Sant Cebri� de Vallalta {{_("WEATHER")}}
+</a>
+
+<div class="small-widget-div" style="display: none;">
+<a 
+    class="weatherwidget-io small-widget"
+    href="https://forecast7.com/en/41d622d60/sant-cebria-de-vallalta/" 
+    data-label_1="Sant Cebri� de Vallalta" data-label_2="WEATHER" 
+    data-font="Roboto" data-mode="Forecast" 
+    data-days="3" data-theme="pure" 
+>
+    Sant Cebri� de Vallalta {{_("WEATHER")}}
+</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+</div>
