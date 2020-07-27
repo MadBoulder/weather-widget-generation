@@ -18,9 +18,22 @@
         Ailefroide
       </div>
       <img class="weather-icon"></img>
-      <div class="card-body">
-        <div class="d-flex justify-content-center">
-          <div class="weather-temperature"></div>
+      <div class="weather-description mx-auto"></div>
+      <div class="card-body" style="padding: 0rem;">
+        <div class="d-flex justify-content-center row" style="margin: 0.75rem;">
+          <div class="col-6 my-auto">
+            <div class="row">
+              <label style="font-size: medium;">Min: </label>
+              <div class="weather-min-temperature" style="font-size: medium;"></div>
+            </div>
+            <div class="row">
+              <label style="font-size: medium;">Max: </label>
+              <div class="weather-max-temperature" style="font-size: medium;"></div>
+            </div>
+          </div>
+          <div class="col-6  my-auto d-flex justify-content-center">
+            <div class="weather-temperature"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -30,7 +43,10 @@
           lng:25,
           iconTarget:'.weather-icon',
           key:'a7bf54fbd775796a64aad9c5ca7d26ef',
-          customIcons: './icons/'
+          customIcons: './icons/',
+          minTemperatureTarget: '.weather-min-temperature',
+          maxTemperatureTarget: '.weather-max-temperature',
+          descriptionTarget: '.weather-description',
         });
     </script>
   </body>
