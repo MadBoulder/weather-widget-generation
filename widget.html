@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="openWeather.js"></script>
+  </head>
+  <body>
+    <img class="weather-icon"><img>
+    <div class="weather-temperature"></div>
+    <script>
+        $('.weather-temperature').openWeather({
+	        lat: 30,
+            lng: 25,
+            iconTarget: '.weather-icon',
+            key: 'a7bf54fbd775796a64aad9c5ca7d26ef'
+        });
+    </script>
+  </body>
+</html>
+
