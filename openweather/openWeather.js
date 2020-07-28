@@ -78,33 +78,34 @@ Licensed under the MIT license
 		
 		// format icon function
 		const mapCustomIconToURL = function(defaultIconFileName, timeOfDay) {
-			let iconName;
-			// if icon is clear sky
-			if (defaultIconFileName == '01d' || defaultIconFileName == '01n') {
-				iconName = 'clear';
-			}
-			// if icon is clouds
-			if (defaultIconFileName == '02d' || defaultIconFileName == '02n' || defaultIconFileName == '03d' || defaultIconFileName == '03n' || defaultIconFileName == '04d' || defaultIconFileName == '04n') {
-				iconName = 'clouds';
-			}
-			// if icon is rain
-			if (defaultIconFileName == '09d' || defaultIconFileName == '09n' || defaultIconFileName == '10d' || defaultIconFileName == '10n') {
-				iconName = 'rain';
-			}
-			// if icon is thunderstorm
-			if (defaultIconFileName == '11d' || defaultIconFileName == '11n') {
-				iconName = 'storm';
-			}
-			// if icon is snow
-			if (defaultIconFileName == '13d' || defaultIconFileName == '13n') {
-				iconName = 'snow';
-			}
-			// if icon is mist
-			if (defaultIconFileName == '50d' || defaultIconFileName == '50n') {
-				iconName = 'mist';
-			}
+			// let iconName;
+			// // if icon is clear sky
+			// if (defaultIconFileName == '01d' || defaultIconFileName == '01n') {
+			// 	iconName = 'clear';
+			// }
+			// // if icon is clouds
+			// if (defaultIconFileName == '02d' || defaultIconFileName == '02n' || defaultIconFileName == '03d' || defaultIconFileName == '03n' || defaultIconFileName == '04d' || defaultIconFileName == '04n') {
+			// 	iconName = 'clouds';
+			// }
+			// // if icon is rain
+			// if (defaultIconFileName == '09d' || defaultIconFileName == '09n' || defaultIconFileName == '10d' || defaultIconFileName == '10n') {
+			// 	iconName = 'rain';
+			// }
+			// // if icon is thunderstorm
+			// if (defaultIconFileName == '11d' || defaultIconFileName == '11n') {
+			// 	iconName = 'storm';
+			// }
+			// // if icon is snow
+			// if (defaultIconFileName == '13d' || defaultIconFileName == '13n') {
+			// 	iconName = 'snow';
+			// }
+			// // if icon is mist
+			// if (defaultIconFileName == '50d' || defaultIconFileName == '50n') {
+			// 	iconName = 'mist';
+			// }
 			// define custom icon URL
-			return `${s.customIcons}${timeOfDay}/${iconName}.svg`;
+			// return `${s.customIcons}${timeOfDay}/${iconName}.svg`;
+			return `${s.customIcons}${timeOfDay}/${defaultIconFileName}.svg`;
 		}
 
 		// define basic api endpoint
