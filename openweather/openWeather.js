@@ -9,7 +9,8 @@ Licensed under the MIT license
 
 */
 
-// https://github.com/michael-lynch/open-weather
+// Source: https://github.com/michael-lynch/open-weather
+
 ;(function($) {
 
 	$.fn.openWeather  = function(options) {
