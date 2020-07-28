@@ -75,6 +75,37 @@ Licensed under the MIT license
 			let time = hours + ':' + minutes; // construct time using hours and minutes
 			return time;
 		}
+		
+		// format icon function
+		const mapCustomIconToURL = function(defaultIconFileName, timeOfDay) {
+			let iconName;
+			// if icon is clear sky
+			if (defaultIconFileName == '01d' || defaultIconFileName == '01n') {
+				iconName = 'clear';
+			}
+			// if icon is clouds
+			if (defaultIconFileName == '02d' || defaultIconFileName == '02n' || defaultIconFileName == '03d' || defaultIconFileName == '03n' || defaultIconFileName == '04d' || defaultIconFileName == '04n') {
+				iconName = 'clouds';
+			}
+			// if icon is rain
+			if (defaultIconFileName == '09d' || defaultIconFileName == '09n' || defaultIconFileName == '10d' || defaultIconFileName == '10n') {
+				iconName = 'rain';
+			}
+			// if icon is thunderstorm
+			if (defaultIconFileName == '11d' || defaultIconFileName == '11n') {
+				iconName = 'storm';
+			}
+			// if icon is snow
+			if (defaultIconFileName == '13d' || defaultIconFileName == '13n') {
+				iconName = 'snow';
+			}
+			// if icon is mist
+			if (defaultIconFileName == '50d' || defaultIconFileName == '50n') {
+				iconName = 'mist';
+			}
+			// define custom icon URL
+			return `${s.customIcons}${timeOfDay}/${iconName}.svg`;
+		}
 
 		// define basic api endpoint
 		let apiURL = 'https://api.openweathermap.org/data/2.5/' + s.query + '?lang=' + s.lang;
@@ -178,10 +209,7 @@ Licensed under the MIT license
 						if(s.customIcons != null) {
 							// define the default icon name
 							const defaultIconFileName = icon;
-
 							let timeOfDay;
-							let iconName;
-
 							// if default icon name contains the letter 'd'
 							if(defaultIconFileName.indexOf('d') != -1) {
 								// define time of day as day
@@ -190,35 +218,9 @@ Licensed under the MIT license
 								// define time of day as night
 								timeOfDay = 'night';
 							}
-							// if icon is clear sky
-							if(defaultIconFileName == '01d' || defaultIconFileName == '01n') {
-								iconName = 'clear';
-							}
-							// if icon is clouds
-							if(defaultIconFileName == '02d' || defaultIconFileName == '02n' || defaultIconFileName == '03d' || defaultIconFileName == '03n' || defaultIconFileName == '04d' || defaultIconFileName == '04n') {
-								iconName = 'clouds';
-							}
-							// if icon is rain
-							if(defaultIconFileName == '09d' || defaultIconFileName == '09n' || defaultIconFileName == '10d' || defaultIconFileName == '10n') {
-								iconName = 'rain';
-							}
-							// if icon is thunderstorm
-							if(defaultIconFileName == '11d' || defaultIconFileName == '11n') {
-								iconName = 'storm';
-							}
-							// if icon is snow
-							if(defaultIconFileName == '13d' || defaultIconFileName == '13n') {
-								iconName = 'snow';
-							}
-							// if icon is mist
-							if(defaultIconFileName == '50d' || defaultIconFileName == '50n') {
-								iconName = 'mist';
-							}
-							// define custom icon URL
-							iconURL = `${s.customIcons}${timeOfDay}/${iconName}.svg`;
 							// append class modifier to wrapper
 							$(s.wrapperTarget).addClass(timeOfDay);
-
+							iconURL = mapCustomIconToURL(defaultIconFileName, timeOfDay);
 						} else {
 							// define icon URL using default icon
 							iconURL = `https://openweathermap.org/img/w/${icon}.svg`;
@@ -252,6 +254,20 @@ Licensed under the MIT license
 					}
 					// run success callback
 					s.success.call(this, weatherObj);
+				}
+
+				// handle daily forecast if the query asks to do so
+				if (s.query.localeCompare('onecall') == 0) {
+					for (let day = 1; day < data.daily.length-1; day++) {
+						const forecast = data.daily[day];
+						var tag = document.createElement("div");
+						tag.id = 'day_' + day.toString();
+						var img = document. createElement("img");
+						img.src = mapCustomIconToURL(forecast.weather[0].icon, 'day');
+						tag.appendChild(img);
+						var element = document.getElementById("current_weather");
+						element.appendChild(tag);
+					}
 				}
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
