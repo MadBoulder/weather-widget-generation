@@ -261,9 +261,15 @@ Licensed under the MIT license
 				if (s.query.localeCompare('onecall') == 0) {
 					for (let day = 1; day < data.daily.length-1; day++) {
 						const forecast = data.daily[day];
+						const weekday = moment.unix(data.daily[day].dt).format('dd');
+						console.log(weekday);
 						var tag = document.createElement("div");
 						tag.id = 'day_' + day.toString();
 						var img = document. createElement("img");
+						var el_span = document.createElement('span');
+						el_span.setAttribute('style', 'font-size: medium'); /*just an example, your styles set here*/
+						var textNode = document.createTextNode(weekday);
+						el_span.appendChild(textNode);
 						if (s.customIcons != null) {
 							img.src = mapCustomIconToURL(forecast.weather[0].icon, 'day');
 						} else {
@@ -272,7 +278,10 @@ Licensed under the MIT license
 						}
 						tag.appendChild(img);
 						var element = document.getElementById("current_weather");
-						element.appendChild(tag);
+						var holder = document.createElement("div");
+						element.appendChild(holder)
+						holder.appendChild(el_span);
+						holder.appendChild(tag);
 					}
 				}
 			},
