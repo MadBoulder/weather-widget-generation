@@ -23,7 +23,8 @@ Licensed under the MIT license
 
 		// define default parameters
 		const defaults = {
-			wrapperTarget: null, // Widget configuration params
+			// Widget configuration params
+			wrapperTarget: null,
 			descriptionTarget: null,
 			maxTemperatureTarget: null,
 			minTemperatureTarget: null,
@@ -34,12 +35,14 @@ Licensed under the MIT license
 			placeTarget: null,
 			iconTarget: null,
 			customIcons: null,
-			units: 'c', // Query params
+			// Query params
+			units: 'c',
 			windSpeedUnit: 'Mps',
 			city: null,
 			lat: null,
 			lng: null,
 			key: null,
+			exclude: null,
 			lang: 'en',
 			query: 'weather', // default (weather) is current weather. Use onecall for forecast predictions
 			success: function() {}, // Callbacks
@@ -94,13 +97,33 @@ Licensed under the MIT license
 		if(s.key != null) {
 			apiURL += '&appid=' + s.key;
 		}
+		if (s.exclude != null) {
+			apiURL += '&exclude=' + s.exclude;
+		}
 
 		$.ajax({
 			type: 'GET',
 			url: apiURL,
-			dataType: 'jsonp',
+			dataType: 'json',
 			success: function(data) {
 				if(data) {
+					// adjust data to expected format
+					if (s.query.localeCompare('onecall') == 0) {
+						data.main = {
+							temp: data.current.temp,
+							temp_min: data.daily[0].temp.min,
+							temp_max: data.daily[0].temp.max,
+							humidity: data.current.humidity,
+						}; 
+						data.wind = {
+							speed: data.current.wind_speed
+						};
+						data.sys = {
+							sunrise: data.current.sunrise,
+							sunset: data.current.sunset
+						};
+					}
+
 					if(s.units == 'f') {
 						// define temperature as fahrenheit
 						temperature = Math.round(((data.main.temp - 273.15) * 1.8) + 32) + '°F';
@@ -121,20 +144,20 @@ Licensed under the MIT license
 					windSpeed = (s.windSpeedUnit == 'km/h') ? data.wind.speed*3.6 : data.wind.speed;
 
 					weatherObj = {
-						city: `${data.name}, ${data.sys.country}`,
+						city: (s.query.localeCompare('weather') == 0) ? `${data.name}, ${data.sys.country}` : '',
 						temperature: {
 							current: temperature,
 							min: minTemperature,
 							max: maxTemperature,
 							units: s.units.toUpperCase()
 						},
-						description: data.weather[0].description,
+						description: (s.query.localeCompare('weather') == 0) ? data.weather[0].description : data.current.weather[0].description,
 						windspeed: `${Math.round(windSpeed)} ${ s.windSpeedUnit }`,
 						humidity: `${data.main.humidity}%`,
 						sunrise: `${formatTime(data.sys.sunrise)} AM`,
 						sunset: `${formatTime(data.sys.sunset)} PM`
 					};
-
+					
 					// set temperature
 					el.html(temperature);
 
@@ -149,11 +172,12 @@ Licensed under the MIT license
 					// set weather description
 					$(s.descriptionTarget).text(weatherObj.description);
 					// if iconTarget and default weather icon aren't null
-					if(s.iconTarget != null && data.weather[0].icon != null) {
+					icon = (s.query.localeCompare('weather') == 0) ? data.weather[0].icon : data.current.weather[0].icon;
+					if (s.iconTarget != null && icon != null) {
 						let iconURL;
 						if(s.customIcons != null) {
 							// define the default icon name
-							const defaultIconFileName = data.weather[0].icon;
+							const defaultIconFileName = icon;
 
 							let timeOfDay;
 							let iconName;
@@ -197,7 +221,7 @@ Licensed under the MIT license
 
 						} else {
 							// define icon URL using default icon
-							iconURL = `https://openweathermap.org/img/w/${data.weather[0].icon}.svg`;
+							iconURL = `https://openweathermap.org/img/w/${icon}.svg`;
 						}
 						// set iconTarget src attribute as iconURL
 						$(s.iconTarget).attr('src', iconURL);
