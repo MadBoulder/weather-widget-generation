@@ -223,7 +223,7 @@ Licensed under the MIT license
 							iconURL = mapCustomIconToURL(defaultIconFileName, timeOfDay);
 						} else {
 							// define icon URL using default icon
-							iconURL = `https://openweathermap.org/img/w/${icon}.svg`;
+							iconURL = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 						}
 						// set iconTarget src attribute as iconURL
 						$(s.iconTarget).attr('src', iconURL);
@@ -263,7 +263,12 @@ Licensed under the MIT license
 						var tag = document.createElement("div");
 						tag.id = 'day_' + day.toString();
 						var img = document. createElement("img");
-						img.src = mapCustomIconToURL(forecast.weather[0].icon, 'day');
+						if (s.customIcons != null) {
+							img.src = mapCustomIconToURL(forecast.weather[0].icon, 'day');
+						} else {
+							// img.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`;
+							img.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
+						}
 						tag.appendChild(img);
 						var element = document.getElementById("current_weather");
 						element.appendChild(tag);
