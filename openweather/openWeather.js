@@ -22,7 +22,7 @@ Licensed under the MIT license
 
 		// define default parameters
 		const defaults = {
-			wrapperTarget: null,
+			wrapperTarget: null, // Widget configuration params
 			descriptionTarget: null,
 			maxTemperatureTarget: null,
 			minTemperatureTarget: null,
@@ -33,14 +33,15 @@ Licensed under the MIT license
 			placeTarget: null,
 			iconTarget: null,
 			customIcons: null,
-			units: 'c',
+			units: 'c', // Query params
 			windSpeedUnit: 'Mps',
 			city: null,
 			lat: null,
 			lng: null,
 			key: null,
 			lang: 'en',
-			success: function() {},
+			query: 'weather', // default is current weather. Use onecall for forecast predictions
+			success: function() {}, // Callbacks
 			error: function(message) {}
 		}
 
@@ -101,7 +102,7 @@ Licensed under the MIT license
 		}
 
 		// define basic api endpoint
-		let apiURL = 'https://api.openweathermap.org/data/2.5/weather?lang='+s.lang;
+		let apiURL = 'https://api.openweathermap.org/data/2.5/'+s.query+'?lang='+s.lang;
 
 		let weatherObj;
 
