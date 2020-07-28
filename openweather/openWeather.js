@@ -40,69 +40,40 @@ Licensed under the MIT license
 			lng: null,
 			key: null,
 			lang: 'en',
-			query: 'weather', // default is current weather. Use onecall for forecast predictions
+			query: 'weather', // default (weather) is current weather. Use onecall for forecast predictions
 			success: function() {}, // Callbacks
 			error: function(message) {}
 		}
 
-		// define plugin
-		const plugin = this;
-
-		// define element
-		const el = $(this);
-
-		// define settings
-		plugin.settings = {}
-
-		// merge defaults and options
-		plugin.settings = $.extend({}, defaults, options);
-
-		// define settings namespace
-		const s = plugin.settings;
+		const plugin = this; // define plugin
+		const el = $(this); // define element
+		plugin.settings = {} // define settings
+		plugin.settings = $.extend({}, defaults, options); // merge defaults and options
+		const s = plugin.settings; // define settings namespace
 
 		// format time function
 		const formatTime = function(unixTimestamp) {
-
-			// define milliseconds using unix time stamp
-			const milliseconds = unixTimestamp * 1000;
-
-			// create a new date using milliseconds
-			const date = new Date(milliseconds);
-
-			// define hours
-			let hours = date.getHours();
-
-			// if hours are greater than 12
+			const milliseconds = unixTimestamp * 1000; // define milliseconds using unix time stamp
+			const date = new Date(milliseconds); // create a new date using milliseconds
+			let hours = date.getHours(); // define hours
 			if(hours > 12) {
-
 				// calculate remaining hours in the day
 				let hoursRemaining = 24 - hours;
-
 				// redefine hours as the reamining hours subtracted from a 12 hour day
 				hours = 12 - hoursRemaining;
 			}
-
-			// define minutes
-			let minutes = date.getMinutes();
-
-			// convert minutes to a string
-			minutes = minutes.toString();
-
+			let minutes = date.getMinutes(); // define minutes
+			minutes = minutes.toString(); // convert minutes to a string
 			// if minutes has less than 2 characters
 			if(minutes.length < 2) {
-
-				// add a 0 to minutes
 				minutes = 0 + minutes;
 			}
-
-			// construct time using hours and minutes
-			let time = hours + ':' + minutes;
-
+			let time = hours + ':' + minutes; // construct time using hours and minutes
 			return time;
 		}
 
 		// define basic api endpoint
-		let apiURL = 'https://api.openweathermap.org/data/2.5/'+s.query+'?lang='+s.lang;
+		let apiURL = 'https://api.openweathermap.org/data/2.5/' + s.query + '?lang=' + s.lang;
 
 		let weatherObj;
 
@@ -113,20 +84,13 @@ Licensed under the MIT license
 
 		// if city isn't null
 		if(s.city != null) {
-
 			// define API url using city (and remove any spaces in city)
-			apiURL += '&q='+s.city;
-
+			apiURL += '&q=' + s.city;
 		} else if(s.lat != null && s.lng != null) {
-
 			// define API url using lat and lng
-			apiURL += '&lat='+s.lat+'&lon='+s.lng;
+			apiURL += '&lat=' + s.lat + '&lon=' + s.lng;
 		}
-
-		// if api key was supplied
 		if(s.key != null) {
-
-			// append api key paramater
 			apiURL += '&appid=' + s.key;
 		}
 
@@ -135,29 +99,19 @@ Licensed under the MIT license
 			url: apiURL,
 			dataType: 'jsonp',
 			success: function(data) {
-
 				if(data) {
-
-					// if units are 'f'
 					if(s.units == 'f') {
-
 						// define temperature as fahrenheit
 						temperature = Math.round(((data.main.temp - 273.15) * 1.8) + 32) + '°F';
-
 						// define min temperature as fahrenheit
 						minTemperature = Math.round(((data.main.temp_min - 273.15) * 1.8) + 32) + '°F';
-
 						// define max temperature as fahrenheit
 						maxTemperature = Math.round(((data.main.temp_max - 273.15) * 1.8) + 32) + '°F';
-
 					} else {
-
 						// define temperature as celsius
 						temperature = Math.round(data.main.temp - 273.15) + '°C';
-
 						// define min temperature as celsius
 						minTemperature = Math.round(data.main.temp_min - 273.15) + '°C';
-
 						// define max temperature as celsius
 						maxTemperature = Math.round(data.main.temp_max - 273.15) + '°C';
 					}
@@ -183,31 +137,20 @@ Licensed under the MIT license
 					// set temperature
 					el.html(temperature);
 
-					// if minTemperatureTarget isn't null
 					if(s.minTemperatureTarget != null) {
-
 						// set minimum temperature
 						$(s.minTemperatureTarget).text(minTemperature);
 					}
-
-					// if maxTemperatureTarget isn't null
 					if(s.maxTemperatureTarget != null) {
-
 						// set maximum temperature
 						$(s.maxTemperatureTarget).text(maxTemperature);
 					}
-
 					// set weather description
 					$(s.descriptionTarget).text(weatherObj.description);
-
 					// if iconTarget and default weather icon aren't null
 					if(s.iconTarget != null && data.weather[0].icon != null) {
-
 						let iconURL;
-
-						// if customIcons isn't null
 						if(s.customIcons != null) {
-
 							// define the default icon name
 							const defaultIconFileName = data.weather[0].icon;
 
@@ -216,98 +159,72 @@ Licensed under the MIT license
 
 							// if default icon name contains the letter 'd'
 							if(defaultIconFileName.indexOf('d') != -1) {
-
 								// define time of day as day
 								timeOfDay = 'day';
-
 							} else {
-
 								// define time of day as night
 								timeOfDay = 'night';
 							}
-
 							// if icon is clear sky
 							if(defaultIconFileName == '01d' || defaultIconFileName == '01n') {
 								iconName = 'clear';
 							}
-
 							// if icon is clouds
 							if(defaultIconFileName == '02d' || defaultIconFileName == '02n' || defaultIconFileName == '03d' || defaultIconFileName == '03n' || defaultIconFileName == '04d' || defaultIconFileName == '04n') {
 								iconName = 'clouds';
 							}
-
 							// if icon is rain
 							if(defaultIconFileName == '09d' || defaultIconFileName == '09n' || defaultIconFileName == '10d' || defaultIconFileName == '10n') {
 								iconName = 'rain';
 							}
-
 							// if icon is thunderstorm
 							if(defaultIconFileName == '11d' || defaultIconFileName == '11n') {
 								iconName = 'storm';
 							}
-
 							// if icon is snow
 							if(defaultIconFileName == '13d' || defaultIconFileName == '13n') {
-
 								iconName = 'snow';
 							}
-
 							// if icon is mist
 							if(defaultIconFileName == '50d' || defaultIconFileName == '50n') {
 								iconName = 'mist';
 							}
-
 							// define custom icon URL
 							iconURL = `${s.customIcons}${timeOfDay}/${iconName}.svg`;
-
 							// append class modifier to wrapper
 							$(s.wrapperTarget).addClass(timeOfDay);
 
 						} else {
-
 							// define icon URL using default icon
 							iconURL = `https://openweathermap.org/img/w/${data.weather[0].icon}.svg`;
 						}
-
 						// set iconTarget src attribute as iconURL
 						$(s.iconTarget).attr('src', iconURL);
 					}
-
-					// if placeTarget isn't null
 					if(s.placeTarget != null) {
-
 						// set place
 						$(s.placeTarget).text(weatherObj.city);
 					}
-
 					// if windSpeedTarget isn't null
 					if(s.windSpeedTarget != null) {
-
 						// set wind speed
 						$(s.windSpeedTarget).text(weatherObj.windspeed);
 					}
-
 					// if humidityTarget isn't null
 					if(s.humidityTarget != null) {
-
 						// set humidity
 						$(s.humidityTarget).text(weatherObj.humidity);
 					}
-
 					// if sunriseTarget isn't null
 					if(s.sunriseTarget != null) {
-
 						// set sunrise
 						$(s.sunriseTarget).text(weatherObj.sunrise);
 					}
-
 					// if sunriseTarget isn't null
 					if(s.sunsetTarget != null) {
-
 						// set sunset
 						$(s.sunsetTarget).text(weatherObj.sunset);
 					}
-
 					// run success callback
 					s.success.call(this, weatherObj);
 				}
