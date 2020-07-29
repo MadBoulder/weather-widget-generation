@@ -33,6 +33,7 @@ Licensed under the MIT license
 			sunriseTarget: null,
 			sunsetTarget: null,
 			placeTarget: null,
+			forecastTarget: null,
 			iconTarget: null,
 			customIcons: null,
 			// Query params
@@ -262,12 +263,11 @@ Licensed under the MIT license
 					for (let day = 1; day < data.daily.length-1; day++) {
 						const forecast = data.daily[day];
 						const weekday = moment.unix(data.daily[day].dt).format('dd');
-						console.log(weekday);
 						var tag = document.createElement("div");
 						tag.id = 'day_' + day.toString();
 						var img = document. createElement("img");
 						var el_span = document.createElement('span');
-						el_span.setAttribute('style', 'font-size: medium'); /*just an example, your styles set here*/
+						el_span.setAttribute('style', 'font-size: medium; align-self: center;');
 						var textNode = document.createTextNode(weekday);
 						el_span.appendChild(textNode);
 						if (s.customIcons != null) {
@@ -277,8 +277,9 @@ Licensed under the MIT license
 							img.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
 						}
 						tag.appendChild(img);
-						var element = document.getElementById("current_weather");
+						var element = document.getElementById(s.forecastTarget);
 						var holder = document.createElement("div");
+						holder.setAttribute('class', 'd-flex flex-column justify-content-center');
 						element.appendChild(holder)
 						holder.appendChild(el_span);
 						holder.appendChild(tag);

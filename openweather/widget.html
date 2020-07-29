@@ -24,6 +24,7 @@
           <img height="100" class="weather-icon"></img>
         </div>
         <div class="weather-description mx-auto"></div>
+        <hr/>
         <div class="card-body" style="padding: 0rem;">
           <div id="current_weather" class="d-flex justify-content-center row" style="margin: 0.75rem;">
             <div class="col-6 my-auto">
@@ -40,6 +41,8 @@
               <div class="weather-temperature"></div>
             </div>
           </div>
+          <hr/>
+          <div id="weather-forecast" class="row d-flex justify-content-center" style="margin: inherit;"></div>
         </div>
       </div>
     </div>
@@ -54,6 +57,7 @@
           minTemperatureTarget:'.weather-min-temperature',
           maxTemperatureTarget:'.weather-max-temperature',
           descriptionTarget:'.weather-description',
+          forecastTarget: 'weather-forecast',
           lang:'es',
           query:'onecall' // to get forecast
         });
