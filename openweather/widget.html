@@ -39,6 +39,9 @@
                   <label style="font-size: medium;">Max:&nbsp;</label>
                   <div class="weather-max-temperature" style="font-size: medium;"></div>
                 </div>
+                <div class="row d-flex justify-content-center">
+                  <div class="wind-speed mb-2" style="font-size: large;"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -60,6 +63,8 @@
         customIcons: './icons/',
         minTemperatureTarget: '.weather-min-temperature',
         maxTemperatureTarget: '.weather-max-temperature',
+        windSpeedTarget: '.wind-speed',
+        windSpeedUnit: 'km/h',
         descriptionTarget: '.weather-description',
         forecastTarget: 'weather-forecast',
         lang: 'en',
