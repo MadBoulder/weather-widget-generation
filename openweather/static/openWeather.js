@@ -119,7 +119,8 @@ Licensed under the MIT license
 			// }
 			// define custom icon URL
 			// return `${s.customIcons}${timeOfDay}/${iconName}.svg`;
-			return `${s.customIcons}${timeOfDay}/${defaultIconFileName}.svg`;
+			// return `${s.customIcons}${timeOfDay}/${defaultIconFileName}.svg`;
+			return `static/${s.customIcons}${timeOfDay}/${defaultIconFileName}.svg`;
 		}
 
 		// define basic api endpoint
