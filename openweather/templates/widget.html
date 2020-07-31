@@ -21,7 +21,7 @@
       <!--Weather widget html code-->
       <div class="card mt-3" style="width: 90%;">
         <div class="card-header d-flex justify-content-center">
-          Barcelona <!-- This will come from the datafile --> 
+          {{ zone }} <!-- This will come from the datafile --> 
         </div>
         <div class="row">
           <div class="d-flex col-3 flex-column justify-content-center">
@@ -61,8 +61,8 @@
     <!-- jQuery, the solution to all your problems -->
     <script>
       $('.weather-temperature').openWeather({
-        lat: 41.38879, // From zone data
-        lng: 2.15899, // From zone data
+        lat: '{{ lat }}', // From zone data
+        lng: '{{ lng }}', // From zone data
         iconTarget: '.weather-icon',
         key: 'a7bf54fbd775796a64aad9c5ca7d26ef',
         customIcons: 'icons/',
@@ -72,7 +72,7 @@
         windSpeedUnit: 'km/h',
         descriptionTarget: '.weather-description',
         forecastTarget: 'weather-forecast',
-        lang: 'en', // from zone data
+        lang: '{{ lang }}', // from zone data
         query: 'onecall' // to get forecast
       });
     </script>
