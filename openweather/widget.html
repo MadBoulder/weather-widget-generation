@@ -19,14 +19,14 @@
       <!--Weather widget html code-->
       <div class="card mt-3" style="width: 90%;">
         <div class="card-header d-flex justify-content-center">
-          Barcelona
+          Barcelona <!-- This will come from the datafile --> 
         </div>
         <div class="row">
-          <div class="d-flex col-2 flex-column justify-content-center">
-            <img height="100" class="weather-icon"></img>
-            <div class="weather-description mx-auto" style="text-transform: capitalize;"></div>
-          </div>
           <div class="d-flex col-3 flex-column justify-content-center">
+            <img height="100" class="weather-icon"></img>
+            <div class="mx-auto weather-description" style="text-transform: capitalize; text-align:center;"></div>
+          </div>
+          <div class="d-flex col-2 flex-column justify-content-center">
             <div id="current_weather" class="d-flex flex-column justify-content-center" style="margin: 0.75rem;">
               <div class="my-auto d-flex justify-content-center">
                 <div class="weather-temperature mb-2" style="font-size: xx-large;"></div>
@@ -59,8 +59,8 @@
     <!-- jQuery, the solution to all your problems -->
     <script>
       $('.weather-temperature').openWeather({
-        lat: 41.38879,
-        lng: 2.15899,
+        lat: 41.38879, // From zone data
+        lng: 2.15899, // From zone data
         iconTarget: '.weather-icon',
         key: 'a7bf54fbd775796a64aad9c5ca7d26ef',
         customIcons: './icons/',
@@ -70,7 +70,7 @@
         windSpeedUnit: 'km/h',
         descriptionTarget: '.weather-description',
         forecastTarget: 'weather-forecast',
-        lang: 'en',
+        lang: 'en', // from zone data
         query: 'onecall' // to get forecast
       });
     </script>
