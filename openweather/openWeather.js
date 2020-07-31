@@ -264,26 +264,26 @@ Licensed under the MIT license
 						const forecast = data.daily[day];
 						const weekday = moment.unix(data.daily[day].dt).format('dd');
 						// Week day and icon
-						var main_container = document.createElement("div");
-						main_container.id = 'day_' + day.toString();
+						var weather_icon = document.createElement("div");
+						weather_icon.id = 'day_' + day.toString();
 						var img = document. createElement("img");
-						var el_span = document.createElement('span');
-						el_span.setAttribute('style', 'font-size: medium; align-self: center;');
+						var weekday_span = document.createElement('span');
+						weekday_span.setAttribute('style', 'font-size: medium; align-self: center;');
 						var textNode = document.createTextNode(weekday);
-						el_span.appendChild(textNode);
+						weekday_span.appendChild(textNode);
 						if (s.customIcons != null) {
 							img.src = mapCustomIconToURL(forecast.weather[0].icon, 'day');
 						} else {
 							// img.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`;
 							img.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
 						}
-						main_container.appendChild(img);
+						weather_icon.appendChild(img);
 						var element = document.getElementById(s.forecastTarget);
-						var holder = document.createElement("div");
-						holder.setAttribute('class', 'd-flex flex-column justify-content-center');
-						element.appendChild(holder)
-						holder.appendChild(el_span);
-						holder.appendChild(main_container);
+						var main_container = document.createElement("div");
+						main_container.setAttribute('class', 'd-flex flex-column justify-content-center');
+						element.appendChild(main_container)
+						main_container.appendChild(weekday_span);
+						main_container.appendChild(weather_icon);
 					}
 				}
 			},
