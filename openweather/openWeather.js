@@ -273,6 +273,7 @@ Licensed under the MIT license
 
 				// handle daily forecast if the query asks to do so
 				if (s.query.localeCompare('onecall') == 0) {
+					moment.locale(s.lang);
 					for (let day = 1; day < data.daily.length-1; day++) {
 						const forecast = data.daily[day];
 						const weekday = moment.unix(data.daily[day].dt).format('dd');
@@ -281,7 +282,7 @@ Licensed under the MIT license
 						weather_icon.id = 'day_' + day.toString();
 						var img = document. createElement("img");
 						var weekday_span = document.createElement('span');
-						weekday_span.setAttribute('style', 'font-size: medium; align-self: center;');
+						weekday_span.setAttribute('style', 'font-size: medium; align-self: center; text-transform: capitalize;');
 						var textNode = document.createTextNode(weekday);
 						weekday_span.appendChild(textNode);
 						if (s.customIcons != null) {
