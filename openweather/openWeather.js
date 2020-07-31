@@ -77,6 +77,17 @@ Licensed under the MIT license
 			return time;
 		}
 		
+		const mapTemp = function(temp, units) {
+			if(units == 'f') {
+				// define temperature as fahrenheit
+				return Math.round(((temp - 273.15) * 1.8) + 32) + '°F';
+
+			} else {
+				// define temperature as celsius
+				return Math.round(temp - 273.15) + '°C';
+			}
+		} 
+
 		// format icon function
 		const mapCustomIconToURL = function(defaultIconFileName, timeOfDay) {
 			// let iconName;
@@ -284,6 +295,17 @@ Licensed under the MIT license
 						element.appendChild(main_container)
 						main_container.appendChild(weekday_span);
 						main_container.appendChild(weather_icon);
+						// Min, max, wind
+						var weekday_data_container = document.createElement("div");
+						var weekday_min_max = document.createElement("div");
+						weekday_min_max.setAttribute('class', 'd-flex justify-content-center');
+						var min_max_temps = document.createElement("span");
+						var textNode = document.createTextNode(mapTemp(data.daily[day].temp.min) + ", " + mapTemp(data.daily[day].temp.max));
+						min_max_temps.appendChild(textNode);
+						min_max_temps.setAttribute('style', 'font-size: small; align-self: center;');
+						weekday_min_max.appendChild(min_max_temps);
+						main_container.appendChild(weekday_min_max);
+						// var weekday_wind = document.createElement("div");
 					}
 				}
 			},
