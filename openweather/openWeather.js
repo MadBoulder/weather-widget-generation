@@ -263,8 +263,9 @@ Licensed under the MIT license
 					for (let day = 1; day < data.daily.length-1; day++) {
 						const forecast = data.daily[day];
 						const weekday = moment.unix(data.daily[day].dt).format('dd');
-						var tag = document.createElement("div");
-						tag.id = 'day_' + day.toString();
+						// Week day and icon
+						var main_container = document.createElement("div");
+						main_container.id = 'day_' + day.toString();
 						var img = document. createElement("img");
 						var el_span = document.createElement('span');
 						el_span.setAttribute('style', 'font-size: medium; align-self: center;');
@@ -276,13 +277,13 @@ Licensed under the MIT license
 							// img.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`;
 							img.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
 						}
-						tag.appendChild(img);
+						main_container.appendChild(img);
 						var element = document.getElementById(s.forecastTarget);
 						var holder = document.createElement("div");
 						holder.setAttribute('class', 'd-flex flex-column justify-content-center');
 						element.appendChild(holder)
 						holder.appendChild(el_span);
-						holder.appendChild(tag);
+						holder.appendChild(main_container);
 					}
 				}
 			},
