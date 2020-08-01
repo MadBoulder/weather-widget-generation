@@ -1,6 +1,21 @@
-from flask import Flask, render_template, abort, request
+from flask import Flask, render_template, abort, request, redirect
 import json
+import os
 app = Flask(__name__)
+
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    if request.method == 'POST':
+        return redirect('/' + request.form.get('zones'))
+    areas = next(os.walk('data/zones/'))[1]
+    data_to_render = {}
+    for area in areas:
+        area_data = {}
+        with open('data/zones/' + area + '/' + area + '.txt', encoding='utf-8') as data:
+            area_data = json.load(data)
+        data_to_render[area_data['name']] = area
+    print(data_to_render)
+    return render_template('home.html', zones=data_to_render)
 
 @app.route('/<string:zone>')
 def widget(zone):
