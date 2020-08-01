@@ -1,1 +1,1 @@
-web: gunicorn openweather.application:app
+web: gunicorn --chdir openweather application:app
