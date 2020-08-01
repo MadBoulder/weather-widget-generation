@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
-        return redirect('/' + request.form.get('zones'))
+        return redirect('/' + request.form.get('zones') + '?' + 'lang=' + request.form.get('lang'))
     areas = next(os.walk('data/zones/'))[1]
     data_to_render = {}
     for area in areas:
@@ -20,6 +20,9 @@ def home():
 @app.route('/<string:zone>')
 def widget(zone):
     try:
+        lang = 'es'
+        if request.args.get('lang', ''):
+            lang = request.args.get('lang', '')
         datafile = 'data/zones/' + zone + '/' + zone + '.txt'
         area_data = {}
         with open(datafile, encoding='utf-8') as data:
@@ -28,7 +31,7 @@ def widget(zone):
         lng = area_data['longitude']
         name = area_data['name']
 
-        return render_template('widget.html', lat=lat, lng=lng, zone=name, lang='es')
+        return render_template('widget.html', lat=lat, lng=lng, zone=name, lang=lang)
     except:
         abort(404)
 
