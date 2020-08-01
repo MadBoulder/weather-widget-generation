@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath openweather application:app
+web: gunicorn openweather.application:app
