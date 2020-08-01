@@ -1,1 +1,1 @@
-web: cd openweather && gunicorn application:app
+web: gunicorn --pythonpath openweather application:app
