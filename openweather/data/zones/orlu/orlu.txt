@@ -1,0 +1,21 @@
+{
+    "name":"Orlu",
+    "latitude":42.698202,
+    "longitude":1.892976,
+    "zoom":16,
+    "parkings": [
+        {
+	    	"parking_latitude":42.696345,
+	    	"parking_longitude":1.896632
+        }
+    ],
+    "sectors": [
+    ],
+    "guides":[
+        {
+            "name":"Info (Guide)",
+            "link":"http://www.ariegepyrenees.com/orlu/topoguide-escalade-bloc-a-orlu/tabid/1040/offreid/5ec30259-1694-48a2-bc5e-70af1c920b1c"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnN5VWU5Te-RM3M5MUNyBwZ6"
+}

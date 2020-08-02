@@ -1,0 +1,17 @@
+{
+    "name":"Lagundo/Algund",
+    "latitude":46.691076,
+    "longitude":11.110667,
+    "zoom":16,
+    "parkings": [
+    ],
+    "sectors": [
+    ],
+    "guides":[
+		{
+            "name":"27Crags",
+            "link":"https://27crags.com/crags/algund"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnO1ynF2-VvslnRZvXv4gGCe"
+}

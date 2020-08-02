@@ -1,0 +1,40 @@
+{ 
+    "name":"Val di Mello",
+    "latitude":46.250127,
+    "longitude":9.640233,
+    "zoom":15,
+    "parkings": [
+        {
+	    	"parking_latitude":46.250542,
+	    	"parking_longitude":9.642198
+        }
+    ],
+    "sectors": [ 
+        {
+            "name":"Sector Il francese",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOttIZiitX9Z4dtOs0iYJ0X"
+        },
+        {
+            "name":"Sector Sass de la Pulenta",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOCRYowgs8sHq7V53oGJGWz"
+        },        
+        {
+            "name":"Sector Melloblocco",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNvDn8G1ifOHWip7jApXxmL"
+        }  
+    ],
+    "guides":[
+        {
+            "name":"Mello Boulder (Guide)",
+            "link":"https://www.versantesud.it/en/shop/mello-boulder/"
+        },
+        {
+            "name":"27Crags",
+            "link":"https://27crags.com/crags/val-di-mello"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnNowoNOWP3xfT8tj2CdQ5VT"
+}

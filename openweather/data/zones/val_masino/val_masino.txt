@@ -1,0 +1,99 @@
+{
+    "name":"Val Masino",
+    "latitude":46.218840,
+    "longitude":9.637826,
+    "zoom":15,
+    "parkings": [
+        {
+	    	"parking_latitude":46.218980,
+	    	"parking_longitude":9.639915
+        },
+        {
+	    	"parking_latitude":46.224788,
+	    	"parking_longitude":9.635700
+        }
+    ],
+    "sectors": [
+        {
+            "name":"Sector Ponte del Baffo",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNe6t6uUQtWE7x_aLkMQBon"
+        },
+        {
+            "name":"Sector Tarzan",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNZ70-CTASwoPMWyJl6Zqog"
+        },
+        {
+            "name":"Sector Zocca",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMw3gJ1kHRj0DIUn4dG2VeB"
+        },
+        {
+            "name":"Sector Zocca Superiore",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMdaM9lEzW-GOKtyfn5Tp_D"
+        },
+        {
+            "name":"Sector Scivolo",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOccozkG_IQayrJLmpAn9-c"
+        },
+        {
+            "name":"Sector Altman",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPU0ZHrpw32SjWSiTDIZbCI"
+        },
+        {
+            "name":"Sector Remenno",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPX1WxD9b5TER2QsUgQ5i-6"
+        },
+        {
+            "name":"Sector Nosferatu",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNwHdANJ7YLIimfeL89jwgu"
+        },
+        {
+            "name":"Sector La mota",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnO4Ahcr167S6DYYnpp-GTH_"
+        },
+        {
+            "name":"Sector Campeggio",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMh1Jzv6yFUjrjR04zmsMJr"
+        },
+        {
+            "name":"Sector Visido - Tetto de la Filorera",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOqoPfUk6uTVeXsZJ2kFcPi"
+        },
+        {
+            "name":"Sector Visido - La collinetta",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNBKiFwZzi6qJP-_eEPa7Ck"
+        },
+        {
+            "name":"Sector Zocca Superiore",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMdaM9lEzW-GOKtyfn5Tp_D"
+        },
+        {
+            "name":"Sector Pedra peintada",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnM7ccM4vbcoaLJuGqzOe5qy"
+        }        
+    ],
+    "guides":[
+        {
+            "name":"Mello Boulder (Guide)",
+            "link":"https://www.versantesud.it/en/shop/mello-boulder/"
+        },
+        {
+            "name":"27Crags",
+            "link":"https://27crags.com/crags/val-masino"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnN1FEv4qfqEHPi7Ey1bTDN1"
+}

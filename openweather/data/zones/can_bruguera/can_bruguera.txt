@@ -1,0 +1,74 @@
+{
+    "name":"Can Bruguera",
+    "latitude":41.59212082176253,
+    "longitude":2.475067377090454,
+    "zoom":16,
+    "parkings": [
+        {
+	    	"parking_latitude":41.59202854589665,
+	    	"parking_longitude":2.47217059135437
+        },
+        {
+	    	"parking_latitude":41.593601229576585,
+	    	"parking_longitude":2.476947605609894
+        }
+    ],
+    "sectors": [
+      {
+        "name":"Sector Durkuek",
+        "sector_data":"/sectors/durkuek.txt",
+        "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPn9ru9cZ4j_M-DBsoahSjG"
+      },
+      {
+        "name":"Sector Termita",
+        "sector_data":"/sectors/termita.txt",
+        "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNuD60ZaFB01vBB5Uebw4DV"
+      },
+      {
+        "name":"Sector Cova del 8",
+        "sector_data":"/sectors/cova_del_8.txt",
+        "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnND1DZa9mp27uOmC4b5cXtC"
+      },
+      {
+        "name":"Sector Màgia Blanca",
+        "sector_data":"/sectors/magia_blanca.txt",
+        "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOK8HS1XcY6aZPIpJ-wuplO"
+      },
+      {
+        "name":"Sector Parking",
+        "sector_data":"/sectors/parking.txt",
+        "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMnBWU8MZfB-m5GBMdhhhXy"
+      },
+      {
+        "name":"Sector Muralla Xina",
+        "sector_data":"/sectors/muralla_xina.txt",
+        "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOJ0GxBpV5wICdAm4L9vEMh"
+      },
+      {
+        "name":"Sector Summerhill",
+        "sector_data":"",
+        "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNEBFYdj6LAcE9FLjG-c4KK"
+      },
+      {
+        "name":"Petit Sector",
+        "sector_data":"/sectors/petit_sector.txt",
+        "link":""      
+      },
+      {
+        "name":"Sector Miratges",
+        "sector_data":"/sectors/miratges.txt",
+        "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOCUfN4seRLNJPDL4lypLDf"
+      }
+    ],
+    "guides":[
+        {
+            "name":"canbru (Blog)",
+            "link":"http://canbru.blogspot.com/"
+        },
+        {
+          "name":"boulderingbcn (Guide)",
+          "link":"http://boulderinbcn.blogspot.com/2013/10/blocs-can-bruguera-sectors-parking.html"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnNoug_nCL7ixidEwjjSAM30"
+}

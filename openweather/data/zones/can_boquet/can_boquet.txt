@@ -1,0 +1,68 @@
+{
+    "name":"Can Boquet",
+    "latitude":41.5205,
+    "longitude":2.3364,
+    "zoom":14,
+    "parkings": [
+        {
+	    	"parking_latitude":41.53170093294457,
+	    	"parking_longitude":2.3421329716603623
+        },
+        {
+	    	"parking_latitude":41.52854029681373,
+	    	"parking_longitude":2.3512249753244987
+        },
+        {
+	    	"parking_latitude":41.513568,
+	    	"parking_longitude":2.326385
+        }
+    ],
+    "sectors": [
+        {
+            "name":"Sector Clàssic",
+            "sector_data":"/sectors/classic.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNld6Kl3x1uegNOQGVT_0B_"
+        },
+        {
+            "name":"Sector Masia",
+             "sector_data":"/sectors/masia.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPI1wnFFZTYhMgtaRkoBsOG"
+        },
+        {
+            "name":"Sector Nou",
+            "sector_data":"/sectors/nou.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOwLiGSbGbhWGIZaoWn_6G5"
+        },
+        {
+            "name":"Sector Halley",
+            "sector_data":"/sectors/halley.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNv38fRIiqJp4kQLytJTOUr"
+        },
+        {
+            "name":"Sector La Font",
+            "sector_data":"/sectors/la_font.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNIIzx7KTguakwv1RIwiD4i"
+        },
+        {
+            "name":"Sector Roca de la Granota",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMXLRbgPY6_wXoBZQrW6QMi"
+        },
+        {
+            "name":"Sector Miracle",
+            "sector_data":"/sectors/miracle.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNqZo4gnJ-wRNAcMI8oBImW"
+        }
+    ],
+    "guides":[
+        {
+            "name":"Boulder Can Boquet (Guide - PDF)",
+            "link":"http://lamaisondelamontagne.org/topo_imp/3020.pdf"
+        },
+        {
+            "name":"blogdgranit (Blog)",
+            "link":"http://blogdgranit.blogspot.com/"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnMVWYgJGEHipShBV-MBLd4T"
+}

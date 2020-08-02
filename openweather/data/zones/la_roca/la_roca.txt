@@ -1,0 +1,53 @@
+{
+    "name":"La Roca del Vallès",
+    "latitude":41.5736,
+    "longitude":2.3346,
+    "zoom":14,
+    "parkings": [
+        {
+	    	"parking_latitude":41.573609,
+	    	"parking_longitude":2.334552
+        },
+        {
+	    	"parking_latitude":41.581655,
+	    	"parking_longitude":2.341238
+        },
+        {
+            "parking_latitude":41.56365348142792,
+            "parking_longitude":2.3159104585647583
+        }
+    ],
+    "sectors": [
+        {
+            "name":"Sector Gustassu",
+            "sector_data":"/sectors/gustassu.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPI6x4-ynUKnFDqNlQ2RhNN"
+        },
+        {
+            "name":"Sector Escorpí",
+             "sector_data":"/sectors/escorpi.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnN49eXALRxJvdLWMiemU1Jt"
+        },
+        {
+            "name":"Sector Morro de Gall",
+            "sector_data":"/sectors/morro_gall.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNcJ-z_7bqG5SB9YC2I-3TI"
+        },
+        {
+            "name":"Sector els Bolets",
+            "sector_data":"/sectors/els_bolets.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNVG2uuI-AYZBOReOZRgYzC"
+        }
+    ],
+    "guides":[
+        {
+            "name":"Vallès bouldering (Blog)",
+            "link":"http://vallesbloc.blogspot.com/"
+        },
+        {
+            "name":"Sector Escorpí 3",
+            "link":"https://www.instagram.com/p/B9etOiwDXEu/"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnOtMgA1ZI0O1yXwn-PPCqBJ"
+}

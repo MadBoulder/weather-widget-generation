@@ -1,0 +1,21 @@
+{
+    "name":"Vernayaz",
+    "latitude":46.136967,
+    "longitude":7.033484,
+    "zoom":14,
+    "parkings": [
+        {
+	    	"parking_latitude":46.134387,
+	    	"parking_longitude":7.037035
+        }
+    ],
+    "sectors": [
+    ],
+    "guides":[
+        {
+            "name":"27 Crags",
+            "link":"https://27crags.com/crags/vernayaz"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnNlqTtDuQlSYc5G5fcQxs0c"
+}

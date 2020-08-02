@@ -1,0 +1,99 @@
+{
+    "name":"Alcañiz",
+    "latitude":41.067511,
+    "longitude":-0.091174,
+    "weather_location":"Alcañiz",
+    "zoom":12,
+    "parkings": [
+        {
+	    	"parking_latitude":41.058416,
+	    	"parking_longitude":-0.084126
+        },
+        {
+	    	"parking_latitude":41.046931,
+	    	"parking_longitude":-0.234493
+        },
+        {
+	    	"parking_latitude":41.058638,
+	    	"parking_longitude":-0.085494
+        },
+        {
+	    	"parking_latitude":41.068484,
+	    	"parking_longitude":-0.089746
+        },
+        {
+	    	"parking_latitude":41.038331,
+	    	"parking_longitude":-0.068518
+        },
+        {
+	    	"parking_latitude":41.038331,
+	    	"parking_longitude":-0.068518
+        },
+        {
+	    	"parking_latitude":41.078457,
+	    	"parking_longitude":-0.110759
+        },
+        {
+	    	"parking_latitude":41.081521,
+	    	"parking_longitude":-0.111358
+        },
+        {
+	    	"parking_latitude":41.086708,
+	    	"parking_longitude":-0.113000
+        },
+        {
+	    	"parking_latitude":41.080876,
+	    	"parking_longitude":-0.098972
+        },
+        {
+	    	"parking_latitude":41.049636,
+	    	"parking_longitude":-0.236256
+        },
+        {
+	    	"parking_latitude":41.058794,
+	    	"parking_longitude":-0.093279
+        },
+        {
+	    	"parking_latitude":41.052793,
+	    	"parking_longitude":-0.085006
+        },
+        {
+	    	"parking_latitude":41.075649,
+	    	"parking_longitude":-0.089799
+        }
+    ],
+    "sectors": [
+		{
+            "name":"Sector El Anfibio",
+            "sector_data":"/sectors/el_anfibio.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPbYvXtpKcRXimqFxnfB9y-"
+        },
+		{
+            "name":"Sector La Vía",
+            "sector_data":"/sectors/la_via.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnOqU9CHp5A3d0HioVzG8GnQ"
+        },
+		{
+            "name":"Sector San Miguel",
+            "sector_data":"/sectors/san_miguel.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMxemLKHqQhFynPyTY7WKwn"
+        },
+		{
+            "name":"Sector La Badina",
+            "sector_data":"/sectors/la_badina.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnPuxQ9vV0QT4YSTzvu5Or3N"
+        },
+		{
+            "name":"Sector Val de Sincesta",
+            "sector_data":"/sectors/val_sincesta.txt",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnNMDsDlhcw84aw0UF93exNr"
+        }
+    ],
+    "guides":[
+        {
+            "name":"Boulder en España (Guide)",
+            "link":"https://www.libreriadesnivel.com/libros/boulder-en-espana/9788498294590/"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnMUvpcclda1FQwCe2Fdcanf"
+}

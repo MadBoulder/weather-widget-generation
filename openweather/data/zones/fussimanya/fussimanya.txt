@@ -1,0 +1,21 @@
+{
+    "name":"Fussimanya",
+    "latitude":41.967258361683754,
+    "longitude":2.3496118403834316,
+    "zoom":16,
+    "parkings": [
+        {
+	    "parking_latitude":41.96491203099786,
+	    "parking_longitude":2.350044748581581
+        }
+    ],
+    "sectors": [
+    ],
+    "guides":[
+        {
+            "name":"rotpunktholds (Guide + Blog)",
+            "link":"http://rotpunktholds.blogspot.com/2010/01/resenas-de-fussimanya-por-el-momento.html"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnONBt8a4NfMppiIOiIVo6tV"
+}

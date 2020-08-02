@@ -1,0 +1,21 @@
+{
+    "name":"Can Camps",
+    "latitude":41.6573761365082,
+    "longitude":2.546367067982601,
+    "zoom":16,
+    "parkings": [
+        {
+	    	"parking_latitude":41.65705750504844,
+	    	"parking_longitude":2.5457917341489065
+        }
+    ],
+    "sectors": [
+    ],
+    "guides":[
+        {
+            "name":"27 Crags (Guide)",
+            "link":"https://27crags.com/crags/can-camps"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnMG8_OdidQEuBPOujU9m5WC"
+}

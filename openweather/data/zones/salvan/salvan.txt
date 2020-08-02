@@ -1,0 +1,22 @@
+{   
+    "name":"Salvan",
+    "latitude":46.12058130458118,
+    "longitude":7.021540403366088,
+    "zoom":16,
+    "parkings": [
+    ],
+    "sectors": [
+		{
+            "name":"Sector Pierre Bergère",
+            "sector_data":"",
+            "link":"https://www.youtube.com/playlist?list=PLlwn5IhJiUnMSQdrXSy08nlrhkVMROqB3"
+        }
+    ],
+    "guides":[
+        {
+            "name":"27 Crags (Guide)",
+            "link":"https://27crags.com/crags/salvan-pierre-bergere/topos/pierre-bergere"
+        }
+    ],
+    "playlist":"PLlwn5IhJiUnOgPnGJr3OiHY6X6QuE1Qzo"
+}
