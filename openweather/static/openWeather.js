@@ -275,57 +275,66 @@ Licensed under the MIT license
 				// handle daily forecast if the query asks to do so
 				if (s.query.localeCompare('onecall') == 0) {
 					moment.locale(s.lang);
-					for (let day = 1; day < data.daily.length-1; day++) {
-						const forecast = data.daily[day];
-						const weekday = moment.unix(data.daily[day].dt).format('dd');
-						// Week day and icon
-						var weather_icon = document.createElement("div");
-						weather_icon.id = 'day_' + day.toString();
-						var img = document. createElement("img");
-						var weekday_span = document.createElement('span');
-						weekday_span.setAttribute('style', 'font-size: medium; align-self: center; text-transform: capitalize;');
-						var textNode = document.createTextNode(weekday);
-						weekday_span.appendChild(textNode);
-						if (s.customIcons != null) {
-							img.src = mapCustomIconToURL(forecast.weather[0].icon, 'day');
-						} else {
-							// img.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`;
-							img.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
+					var elements = document.getElementsByClassName(s.forecastTarget);
+					for (let elIndex = 0; elIndex < elements.length; elIndex++) {
+						var element = elements[elIndex];
+						console.log(element);
+						var daysLength = data.daily.length-1;
+						if (element.id === "small") {
+							daysLength = 4;
 						}
-						weather_icon.appendChild(img);
-						var element = document.getElementById(s.forecastTarget);
-						var main_container = document.createElement("div");
-						main_container.setAttribute('class', 'd-flex flex-column justify-content-center mx-2');
-						element.appendChild(main_container)
-						main_container.appendChild(weekday_span);
-						main_container.appendChild(weather_icon);
-						// rest of data
-						var weekday_data_container = document.createElement("div");
-						// Min, max temps
-						var weekday_min_max = document.createElement("div");
-						weekday_min_max.setAttribute('class', 'd-flex justify-content-center');
-						var min_max_temps = document.createElement("span");
-						var textNode = document.createTextNode(mapTemp(data.daily[day].temp.min) + ", " + mapTemp(data.daily[day].temp.max));
-						min_max_temps.appendChild(textNode);
-						min_max_temps.setAttribute('style', 'font-size: small; align-self: center;');
-						weekday_min_max.appendChild(min_max_temps);
-						main_container.appendChild(weekday_min_max);
-						// wind
-						var weekday_wind = document.createElement("div");
-						weekday_wind.setAttribute('class', 'd-flex justify-content-center');
-						var wind_data = document.createElement("span");
-						var wind_icon = document.createElement("i");
-						wind_icon.setAttribute('class', 'material-icons mt-1 mr-1');
-						wind_icon.setAttribute('style', 'font-size: 18px;');
-						var textNodeWind = document.createTextNode('toys');
-						wind_icon.appendChild(textNodeWind);
-						var textNode = document.createTextNode(parseInt(mapWind(data.daily[day].wind_speed, s.windSpeedUnit)) + ' ' + s.windSpeedUnit);
-						wind_data.appendChild(textNode);
-						wind_data.setAttribute('style', 'font-size: small; align-self: center;');
-						weekday_wind.appendChild(wind_icon);
-						weekday_wind.appendChild(wind_data);
-						main_container.appendChild(weekday_wind);
-
+						for (let day = 1; day < daysLength; day++) {
+							const forecast = data.daily[day];
+							const weekday = moment.unix(data.daily[day].dt).format('dd');
+							// Week day and icon
+							var weather_icon = document.createElement("div");
+							weather_icon.id = 'day_' + day.toString();
+							var img = document. createElement("img");
+							var weekday_span = document.createElement('span');
+							weekday_span.setAttribute('style', 'font-size: medium; align-self: center; text-transform: capitalize;');
+							var textNode = document.createTextNode(weekday);
+							weekday_span.appendChild(textNode);
+							if (s.customIcons != null) {
+								img.src = mapCustomIconToURL(forecast.weather[0].icon, 'day');
+							} else {
+								// img.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`;
+								img.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
+							}
+							img.setAttribute("height", "48px");
+							weather_icon.setAttribute("style", "justify-content: center; display: flex;");
+							weather_icon.appendChild(img);
+							var main_container = document.createElement("div");
+							main_container.setAttribute('class', 'd-flex flex-column justify-content-center mx-2');
+							element.appendChild(main_container)
+							main_container.appendChild(weekday_span);
+							main_container.appendChild(weather_icon);
+							// rest of data
+							// var weekday_data_container = document.createElement("div");
+							// Min, max temps
+							var weekday_min_max = document.createElement("div");
+							weekday_min_max.setAttribute('class', 'd-flex justify-content-center');
+							var min_max_temps = document.createElement("span");
+							var textNode = document.createTextNode(mapTemp(data.daily[day].temp.min) + ", " + mapTemp(data.daily[day].temp.max));
+							min_max_temps.appendChild(textNode);
+							min_max_temps.setAttribute('style', 'font-size: small; align-self: center;');
+							weekday_min_max.appendChild(min_max_temps);
+							main_container.appendChild(weekday_min_max);
+							// wind
+							var weekday_wind = document.createElement("div");
+							weekday_wind.setAttribute('class', 'd-flex justify-content-center');
+							var wind_data = document.createElement("span");
+							var wind_icon = document.createElement("i");
+							wind_icon.setAttribute('class', 'material-icons mt-1 mr-1');
+							wind_icon.setAttribute('style', 'font-size: 18px;');
+							var textNodeWind = document.createTextNode('toys');
+							wind_icon.appendChild(textNodeWind);
+							var textNode = document.createTextNode(parseInt(mapWind(data.daily[day].wind_speed, s.windSpeedUnit)) + ' ' + s.windSpeedUnit);
+							wind_data.appendChild(textNode);
+							wind_data.setAttribute('style', 'font-size: small; align-self: center;');
+							weekday_wind.appendChild(wind_icon);
+							weekday_wind.appendChild(wind_data);
+							main_container.appendChild(weekday_wind);
+						}
 					}
 				}
 			},

@@ -60,7 +60,7 @@
         </div>
         <hr />
         <div class="d-flex col-7 flex-column justify-content-center">
-          <div id="weather-forecast" class="row d-flex justify-content-center" style="margin: inherit;"></div>
+          <div id="big" class="row d-flex justify-content-center weather-forecast" style="margin: inherit;"></div>
         </div>
       </div>
     </div>
@@ -68,34 +68,34 @@
 
   <div id="small-weather-widget" class="container d-flex justify-content-center align-content-center">
     <!--Weather widget html code-->
-    <div class="card mt-3" style="width: 90%;">
-      <div class="card-header d-flex justify-content-center">
+    <div class="card mt-1" style="width: 90%;">
+      <div class="card-header d-flex justify-content-center" style="font-size: medium;">
         {{ zone }}
         <!-- This will come from the datafile -->
       </div>
-      <div class="row">
-        <div class="d-flex col-6 flex-column justify-content-center">
-          <img height="100" class="weather-icon"></img>
-          <div class="mx-auto weather-description" style="text-transform: capitalize; text-align:center;"></div>
+      <div class="row mt-1">
+        <div class="d-flex col-6 flex-column justify-content-center" style="font-size: medium;">
+          <img height="75" class="weather-icon"></img>
+          <div class="mx-auto weather-description" style="text-transform: capitalize; text-align:center; font-size: medium;"></div>
         </div>
         <div class="d-flex col-6 flex-column justify-content-center">
           <div id="current_weather" class="d-flex flex-column justify-content-center" style="margin: 0.75rem;">
             <div class="my-auto d-flex justify-content-center">
-              <div class="weather-temperature mb-2" style="font-size: xx-large;"></div>
+              <div class="weather-temperature mb-2" style="font-size: large;"></div>
             </div>
-            <div class="my-auto">
-              <div class="row d-flex justify-content-center">
-                <label style="font-size: medium;">Min:&nbsp;</label>
-                <div class="weather-min-temperature" style="font-size: medium;"></div>
+            <div class="my-auto row d-flex">
+              <div class="col-6 d-flex justify-content-center">
+                <label style="font-size: small;">Min:&nbsp;</label>
+                <div class="weather-min-temperature" style="font-size: small;"></div>
               </div>
-              <div class="row d-flex justify-content-center">
-                <label style="font-size: medium;">Max:&nbsp;</label>
-                <div class="weather-max-temperature" style="font-size: medium;"></div>
+              <div class="col-6 d-flex justify-content-center">
+                <label style="font-size: small;">Max:&nbsp;</label>
+                <div class="weather-max-temperature" style="font-size: small;"></div>
               </div>
-              <div class="row d-flex justify-content-center">
-                <i class="material-icons mr-2">toys</i>
-                <div class="wind-speed mb-2" style="font-size: medium;"></div>
-              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <i class="material-icons mr-2">toys</i>
+              <div class="wind-speed mb-2" style="font-size: small;"></div>
             </div>
           </div>
         </div>
@@ -103,6 +103,9 @@
         <!-- <div class="d-flex col-7 flex-column justify-content-center">
           <div id="weather-forecast" class="row d-flex justify-content-center" style="margin: inherit;"></div>
         </div> -->
+      </div>
+      <hr style="margin-top: 0px; margin-bottom: 0px;" />
+      <div id="small" class="row d-flex justify-content-center weather-forecast mb-2" style="margin: inherit;">
       </div>
     </div>
   </div>
@@ -144,6 +147,7 @@
     display: block;
   }
 }
+
 @media only screen and (min-width: 600px) {
   #big-weather-widget {
       display: block;
