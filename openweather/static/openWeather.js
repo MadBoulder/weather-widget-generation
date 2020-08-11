@@ -291,7 +291,7 @@ Licensed under the MIT license
 							weather_icon.id = 'day_' + day.toString();
 							var img = document. createElement("img");
 							var weekday_span = document.createElement('span');
-							weekday_span.setAttribute('style', 'font-size: medium; align-self: center; text-transform: capitalize;');
+							weekday_span.setAttribute('style', 'font-size: small; align-self: center; text-transform: capitalize;');
 							var textNode = document.createTextNode(weekday);
 							weekday_span.appendChild(textNode);
 							if (s.customIcons != null) {
@@ -300,7 +300,7 @@ Licensed under the MIT license
 								// img.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`;
 								img.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
 							}
-							img.setAttribute("height", "48px");
+							img.setAttribute("height", "40px");
 							weather_icon.setAttribute("style", "justify-content: center; display: flex;");
 							weather_icon.appendChild(img);
 							var main_container = document.createElement("div");

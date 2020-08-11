@@ -68,22 +68,22 @@
 
   <div id="small-weather-widget" class="container d-flex justify-content-center align-content-center">
     <!--small weather widget html code-->
-    <div class="card mt-1" style="width: 90%;">
-      <div class="card-header d-flex justify-content-center" style="font-size: medium;">
+    <div class="card mt-1" style="width: 75%;">
+      <div class="card-header d-flex justify-content-center" style="font-size: small; padding: 3px;">
         {{ zone }}
         <!-- This will come from the datafile -->
       </div>
-      <div class="row mt-1">
-        <div class="d-flex col-6 flex-column justify-content-center" style="font-size: medium;">
-          <img height="75" class="weather-icon"></img>
-          <div class="mx-auto weather-description" style="text-transform: capitalize; text-align:center; font-size: medium;"></div>
+      <div class="row">
+        <div class="d-flex col-6 flex-column justify-content-center" style="font-size: small;">
+          <img height="60" class="weather-icon"></img>
+          <div class="mx-auto weather-description" style="text-transform: capitalize; text-align:center; font-size: small;"></div>
         </div>
         <div class="d-flex col-6 flex-column justify-content-center">
-          <div id="current_weather" class="d-flex flex-column justify-content-center" style="margin: 0.75rem;">
+          <div id="current_weather" class="d-flex flex-column justify-content-center">
             <div class="my-auto d-flex justify-content-center">
               <div class="weather-temperature mb-2" style="font-size: large;"></div>
             </div>
-            <div class="my-auto row d-flex">
+            <div class="my-auto mx-auto row d-flex">
               <div class="col-6 d-flex justify-content-center">
                 <label style="font-size: small;">Min:&nbsp;</label>
                 <div class="weather-min-temperature" style="font-size: small;"></div>
